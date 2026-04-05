@@ -1,0 +1,118 @@
+// This file defines our configuration for Markdownlint. See
+// https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
+// for more details on each rule.
+{
+  "default": true,
+  "ul-style": {
+    "style": "dash"
+  },
+  "ul-indent": {
+    "indent": 2
+  },
+  "no-hard-tabs": {
+    "spaces_per_tab": 2
+  },
+  "line-length": false,
+  "table-column-style": false,
+  "no-duplicate-heading": {
+    "siblings_only": true
+  },
+  "single-title": {
+    "front_matter_title": "^\\s*title\\s*[:=]"
+  },
+  "no-trailing-punctuation": {
+    "punctuation": ".,;:"
+  },
+  "ol-prefix": {
+    "style": "ordered"
+  },
+  "no-inline-html": {
+    "allowed_elements": [
+      "abbr",
+      "br",
+      "caption",
+      "code",
+      "col",
+      "colgroup",
+      "details",
+      "div",
+      "em",
+      "img",
+      "kbd",
+      "li",
+      "ol",
+      "p",
+      "pre",
+      "strong",
+      "sub",
+      "summary",
+      "sup",
+      "table",
+      "tbody",
+      "td",
+      "tfoot",
+      "th",
+      "thead",
+      "tr",
+      "ul",
+      "i"
+    ]
+  },
+  "no-bare-urls": false,
+  "no-emphasis-as-header": false,
+  "no-space-in-emphasis": false,
+  "fenced-code-language": false,
+  "no-alt-text": false,
+  "code-block-style": {
+    "style": "fenced"
+  },
+  "no-space-in-code": false,
+  "emphasis-style": {
+    "style": "underscore"
+  },
+  "strong-style": {
+    "style": "asterisk"
+  },
+  "link-fragments": false,
+  "descriptive-link-text": true,
+  "reference-links-images": false,
+
+  "search-replace": {
+    "rules": [
+      {
+        "name": "nbsp",
+        "message": "Don't use no-break spaces",
+        "searchPattern": "/ /g",
+        "replace": " ",
+        "searchScope": "all"
+      },
+      {
+        "name": "relative-link-path",
+        "message": "Don't use relative paths",
+        "search": "](..",
+        "searchScope": "text"
+      },
+      {
+        "name": "trailing-spaces",
+        "message": "Avoid trailing spaces",
+        "searchPattern": "/  +$/gm",
+        "replace": "",
+        "searchScope": "all"
+      },
+      {
+        "name": "double-spaces",
+        "message": "Avoid double spaces",
+        "searchPattern": "/([^\\s>])  ([^\\s|])/g",
+        "replace": "$1 $2",
+        "searchScope": "text"
+      },
+      {
+        "name": "localhost-links",
+        "message": "Don't use localhost for links",
+        "searchPattern": "/\\]\\(https?:\\/\\/localhost:\\d+\\//g",
+        "replace": "](/",
+        "searchScope": "text"
+      }
+    ]
+  }
+}
