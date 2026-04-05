@@ -158,7 +158,15 @@ const config: Config = {
   } satisfies Preset.ThemeConfig,
 
   plugins: [
-    '@docusaurus/theme-live-codeblock'
+    '@docusaurus/theme-live-codeblock',
+    [
+      "posthog-docusaurus",
+      {
+        apiKey: "phc_rA8oUST2KQnixsSBGEdi6CLA6Gz7cWGWzDwmupTGtsxZ",
+        appUrl: "https://eu.i.posthog.com",
+        enableInDevelopment: false,
+      },
+    ],
   ],
 }
 
