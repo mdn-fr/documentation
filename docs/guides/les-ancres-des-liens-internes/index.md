@@ -10,7 +10,7 @@ Nous avons vu, dans un précédent guide, qu'il était possible de créer des li
 
 ### Les liens externes
 
-Les liens en Markdown sont écrit d'une manière standardisée que nous avons vu précédemment :
+Les liens en Markdown sont écrits d'une manière standardisée que nous avons vue précédemment :
 
 ```markdown
 [Texte du lien](https://www.exemple.test)
@@ -31,7 +31,7 @@ Ce qui est ajouté après la barre oblique est le contenu qui est [utilisé dans
 Nous distinguons **trois types** de liens internes, deux qui utilisent l'écriture Markdown et une qui utilise les macros.
 
 - le premier type de liens internes utilisent la méthode d'écriture de Markdown avec un chemin qui commence avec `/fr/docs/`, mais lorsque la page n'existe pas en français, le MDN va convertir le lien vers un lien de repli avec `/docs/en-US/` et marquer le lien comme anglais dans son titre.
-- le second type de liens a des similarité avec la première méthode, mais ajoute un [Fragment d'une URI](https://developer.mozilla.org/docs/Web/URI/Reference/Fragment) pour diriger la personne qui clique sur ce lien, vers le titre ciblé. Les fragments ont une règle d'écriture sur le MDN, voici ce qu'il faut savoir :
+- le second type de liens a des similarités avec la première méthode, mais ajoute un [Fragment d'une URI](https://developer.mozilla.org/docs/Web/URI/Reference/Fragment) pour diriger la personne qui clique sur ce lien, vers le titre ciblé. Les fragments ont une règle d'écriture sur le MDN, voici ce qu'il faut savoir :
   - Les espaces sont remplacés par des tirets bas `_` `U+005F UNDERSCRORE`, car les tirets sont préservés dans les liens pour les titres qui en contiennent (ce qui va donner `mot_-_mot` autour d'un tiret) ;
   - Le fragment doit être écrit en minuscules ;
   - Les accents sont préservés ;

@@ -60,7 +60,7 @@ Afin d'utiliser du code, mais ne pas l'afficher car : déjà présenté une fois
 
 Afin de créer des exemples itéractifs, il existe de nombreux mots clés avec des effets différents, nous avons présenté le résultat de ce bloc de code dans [un article présentant les exemples interactifs](/docs/guides/les-exemples-interactifs#les-exemples-interactifs).
 
-Les divers mots clés sont les suivants :
+Les divers mots-clés sont les suivants :
 
 - `interactive-example`
   - C'est le mot clé par défaut qui traite le bloc de code comme un élément à rendre directement. Le bloc créé en résultat diffère selon le langage assigné au bloc de code. Par exemple, définir du JavaScript affichera une console à la place d'un rendu HTML.

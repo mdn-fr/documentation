@@ -16,15 +16,15 @@ Pour pouvoir mettre en place un environnement de travail qui vous permettra de c
 | [Git](https://git-scm.com/)                                       | Moyenne    |
 | [Node.js](https://nodejs.org/) `24.x` et npm `11.9`               | Moyenne    |
 
-Installer un éditeur ou utiliser votre éditeur favoris pour préparer votre environnement de travail. Nous avons mis VSCode puisque nous proposons également un plugin dédié aux macros et leur syntaxe.
+Installer un éditeur ou utiliser votre éditeur favori pour préparer votre environnement de travail. Nous avons mis VSCode puisque nous proposons également un plugin dédié aux macros et leur syntaxe.
 
 ## Cloner les dépôts qui vont permettre de travailler localement
 
 Le MDN utilise un outil nommé **Fred** (pour **Fr**ont-**E**n**d**) qui permet de rendre les pages au format du MDN comme si vous utilisiez le site directement. Cependant, l'outil ne fonctionne pas seul, il a besoin que nous y connections les dépôts contenant les pages _anglaises_ et _traduites_.
 
-Pour se faire, créer un dossier sur votre ordinateur qui vous servira de point de travail pour copier les dépôts.
+Pour ce faire, créer un dossier sur votre ordinateur qui vous servira de point de travail pour copier les dépôts.
 
-Pour que cela fonctionne, nous aurons besoin de le dossier de travail contienne les dépôts de la manère suivante :
+Pour que cela fonctionne, nous aurons besoin que le dossier de travail contienne les dépôts de la manière suivante :
 
 ```plain
 📂 <votre-dossier>
@@ -37,7 +37,7 @@ Pour arriver à ça, nous allons commencer par cloner les 3 dépôts.
 
 ### Cloner le dépôt de travail `mdn/fred`
 
-Le dépôt contenant le serveur local sera la première étape pour paramétrer ses variables d'environnement et installer les dépendances nécessaire à son bon fonctionnement.
+Le dépôt contenant le serveur local sera la première étape pour paramétrer ses variables d'environnement et installer les dépendances nécessaires à son bon fonctionnement.
 
 Ouvrez un terminal de commande dans votre dossier de travail pour exécuter les commandes suivantes :
 
@@ -110,7 +110,7 @@ Vous pouvez donc commencer à naviguer entre les pages des diverses langues à p
 À la différence de Yari, le serveur local ne permet pas de voir les différentes erreurs de liens, macros, pages directement dans son interface, ces erreurs sont affichées dans la console directement.
 Les pages sont actualisées toutes les secondes, elles ne se rechargent cependant que lorsque vous enregistrez une modification sur la page que vous regardez.
 
-Depuis la page, vous avez plusieurs outils de proposés en haut :
+Depuis la page, vous avez plusieurs outils qui sont proposés en haut :
 
 ![Présentation de la barre d'outils située en haut des pages avec les deux boutons présentés ci-dessous et l'indicateur de rechargement de la page toutes les secondes](local-server-tools-on-top-of-page.png)
 
@@ -123,8 +123,8 @@ Depuis la page, vous avez plusieurs outils de proposés en haut :
     EDITOR=code # pour Visual Studio Code
     ```
 
-Féliciation, vous avez terminé de mettre en place votre environnement de travail, vous êtes prêt·e à contribuer au MDN en commençant à modifier les pages que vous souhaitez.
+Félicitation, vous avez terminé de mettre en place votre environnement de travail, vous êtes prêt·e à contribuer au MDN en commençant à modifier les pages que vous souhaitez.
 
 ## Résumé
 
-Nous avons mise en place l'environnement local pour ouvrir le serveur local Fred et afficher les pages des dépôts de contenu. Nous pouvons maintenant aborder les différentes façons de contribuer au MDN grâce à un environnement dédié.
+Nous avons mis en place l'environnement local pour ouvrir le serveur local Fred et afficher les pages des dépôts de contenu. Nous pouvons maintenant aborder les différentes façons de contribuer au MDN grâce à un environnement dédié.

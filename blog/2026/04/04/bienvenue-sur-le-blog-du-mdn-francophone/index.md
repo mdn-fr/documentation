@@ -48,7 +48,7 @@ Nous documentons divers éléments tels que les outils pour contribuer et les m�
 #### Les méthodes avancées pour contribuer sur Github
 
 - [Mettre en place un environnement de développement local](/docs/contribuer/mettre-en-place-un-environnement-de-developpement-local)
-- [Les méthodes avancées pour contribuer sur Github](/docs/contribuer/méthodes-avancees-pour-contribuer-sur-github)
+- [Les méthodes avancées pour contribuer sur Github](/docs/contribuer/methodes-avancees-pour-contribuer-sur-github)
 
 #### Les outils créés pour vous aider à contribuer
 

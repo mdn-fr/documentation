@@ -63,7 +63,7 @@ l10n:
 Contenu de la page
 ```
 
-Comme vous pouvez le remarquez, les données sont écrites sous une forme `clé: valeur` et ne sont séparées que par des retours à la ligne. Lorsqu'une clé contient une autre clé, on ajoute une indentation pour ajouter un niveau hiérarchique à la clé enfant.
+Comme vous pouvez le remarquer, les données sont écrites sous une forme `clé: valeur` et ne sont séparées que par des retours à la ligne. Lorsqu'une clé contient une autre clé, on ajoute une indentation pour ajouter un niveau hiérarchique à la clé enfant.
 
 C'est pourquoi nous n'écrivons pas :
 

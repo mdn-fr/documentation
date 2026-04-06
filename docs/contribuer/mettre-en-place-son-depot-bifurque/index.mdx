@@ -4,7 +4,7 @@ slug: /contribuer/mettre-en-place-son-depot-bifurque
 tags: [guides, github]
 ---
 
-Ce guide vous présent la méthode de contribution au MDN par le biais de modification des pages Markdown en utilisant l'interfacde de Github. Les dépôts sont bigurqués pour permettre à chacun de faire des modifications sans impacter le dépôt principal avec des actions potentiellement dangereuses.
+Ce guide vous présent la méthode de contribution au MDN par le biais de modification des pages Markdown en utilisant l'interface de Github. Les dépôts sont bifurqués pour permettre à chacun de faire des modifications sans impacter le dépôt principal avec des actions potentiellement dangereuses.
 
 ## Bifurquer le dépôt principal
 
@@ -22,8 +22,8 @@ Voici les étapes à suivre pour bifurquer un dépôt, nous allons utiliser [le 
 
    ![Formulaire de bifurcation du dépôt avec les champs pour le nom du dépôt et les branches à copier](fork-form-mdn-repo.png)
 
-3. Une fois effectué, nous pourrez naviguer dans le dépôt pour modifier la page que vous souhaitez.
-   - Les pages sont rangées dans les dossiers `files/fr/`, ce qui rend les différentes catégories très strcuturées et facile à naviguer.
+3. Une fois effectué, vous pourrez naviguer dans le dépôt pour modifier la page que vous souhaitez.
+   - Les pages sont rangées dans les dossiers `files/fr/`, ce qui rend les différentes catégories très structurées et faciles à naviguer.
 
      ```plain title="Structure du dépôt"
      📂 files
@@ -59,14 +59,14 @@ Félicitation, vous avez maintenant une copie du dépôt d'origine.
 
 ## Proposer des modifications
 
-1. Une fois que vous êtes dans la page de votre dépôt bifurqué, vous pouvez cliquez sur le petit crayon (&nbsp;<Pencil size={16} />&nbsp;) pour éditer la page.
-2. Modifiez le contenu que vous souaitez changer puis, une fois que vous avez terminé, cliquez sur le bouton `Propose changes` pour proposer vos modifications. Un formulaire s'affiche pour vous demander le titre de votre instantané de modification. Nous recommendons d'utiliser les titres standardisés comme `chore(fr): description courte` pour des modifications de la documentation ou `fix(fr): description courte` lorsque vous corrigez des erreurs.
+1. Une fois que vous êtes dans la page de votre dépôt bifurqué, vous pouvez cliquer sur le petit crayon (&nbsp;<Pencil size={16} />&nbsp;) pour éditer la page.
+2. Modifiez le contenu que vous souhaitez changer puis, une fois que vous avez terminé, cliquez sur le bouton `Propose changes` pour proposer vos modifications. Un formulaire s'affiche pour vous demander le titre de votre instantané de modification. Nous recommandons d'utiliser les titres standardisés comme `chore(fr): description courte` pour des modifications de la documentation ou `fix(fr): description courte` lorsque vous corrigez des erreurs.
    Nommer de cette manière respecte les [conventions de nommages des instantanés de modification <sup>(angl.)</sup>](https://www.conventionalcommits.org/en/v1.0.0/#specification).
 
-   Une fois la description courte écrite, vous devez choisir de « Créer une nouvelle branche » et la nommer. Si vous souhaitez vous retrouver entre vos branche, pensez à leur donner un nom facile à comprendre.
+   Une fois la description courte écrite, vous devez choisir de « Créer une nouvelle branche » et la nommer. Si vous souhaitez vous retrouver entre vos branches, pensez à leur donner un nom facile à comprendre.
 
    :::warning
-   Vous ne devez jamais modifier le contenu de la branche `main`, c'est pourquoi lorsque vous enregistre la modification, vous créez une nouvelle branche. Comme ça vous bifurquez la branche principale vers une version modifiée qui n'impacte pas la branche principale. Cela vous permet de garder la branche `main` à jour et l'actualiser à chaque fois que vous voulez mettre à jour votre dépôt bifurqué ou faire une nouvelle modification.
+   Vous ne devez jamais modifier le contenu de la branche `main`, c'est pourquoi lorsque vous enregistrez la modification, vous créez une nouvelle branche. Comme ça, vous bifurquez la branche principale vers une version modifiée qui n'impacte pas la branche principale. Cela vous permet de garder la branche `main` à jour et l'actualiser à chaque fois que vous voulez mettre à jour votre dépôt bifurqué ou faire une nouvelle modification.
    :::
 
 3. Une fois tout complété, vous pouvez retourner sur [le dépôt principal](https://github.com/mdn/translated-content) pour créer une requête de tirage (<i lang="en">pull request</i> en anglais) afin d'intégrer vos modifications dans le MDN. Si vous le faites directement après avoir enregistré la modification, un bandeau jaune s'affiche pour ouvrir directement la requête. Sinon, vous pouvez cliquer sur l'onglet `Pull requests` du dépôt principal et cliquer sur le bouton `New pull request` pour créer une nouvelle requête de tirage.
@@ -83,4 +83,4 @@ Il ne vous reste plus qu'à attendre d'un membre de l'équipe de relecture vienn
 
 ## Résumé
 
-Nous avons vu dans ce guide comment mettre en place son dépôt biffurqué et comment contribuer en effectuant des modifications sur les pages depuis Github. A partir d'ici, vous pouvez faire des petites modifications pour mettre à jour ou corriger les pages du MDN. Pour effectuer des opérations plus complexes, nous vous invitons à lire le guide suivant qui vous apprendra à créer des pages, ajouter des images et utiliser un environnement local.
+Nous avons vu dans ce guide comment mettre en place son dépôt bifurqué et comment contribuer en effectuant des modifications sur les pages depuis Github. À partir d'ici, vous pouvez faire des petites modifications pour mettre à jour ou corriger les pages du MDN. Pour effectuer des opérations plus complexes, nous vous invitons à lire le guide suivant qui vous apprendra à créer des pages, ajouter des images et utiliser un environnement local.

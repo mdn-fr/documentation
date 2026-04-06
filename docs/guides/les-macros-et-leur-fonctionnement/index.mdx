@@ -14,7 +14,7 @@ La macro `JSFiddleEmbed` est en cours de suppression des pages traduites. Il est
 
 Les macros sont présentes depuis la version WikiMedia du MDN, elles permettent de manière générale de simplifier la rédaction d'éléments et de rendus qui seraient compliqués à faire avec du simple HTML pour des personnes qui souhaitent écrire ou traduire des pages.
 
-De ce fait, les macros viennent simplifier la rédaction en réduisant les liens à de simple valeurs. Par exemple pour appeler un élément HTML, il suffit d'appeler la macro des éléments HTML, que nous présenterons après, comme ceci :
+De ce fait, les macros viennent simplifier la rédaction en réduisant les liens à de simples valeurs. Par exemple pour appeler un élément HTML, il suffit d'appeler la macro des éléments HTML, que nous présenterons après, comme ceci :
 
 ```markdown
 {{HTMLElement("section")}}
@@ -28,7 +28,7 @@ ce qui donnera en html :
 </a>
 ```
 
-Comme vous pouvez le remarquez, la longueur du contenu écrit est bien plus courte.
+Comme vous pouvez le remarquer, la longueur du contenu écrit est bien plus courte.
 Cela n'empêche pas d'utiliser l'écriture markdown pour appeler le même lien, mais le faire aura pour effet de prolonger la longueur du code écrit en Markdown et rendra difficile la lecture de la page Markdown pour une personne qui éditerait cette page.
 
 ```markdown
@@ -63,7 +63,7 @@ import { ReadOnlyInline } from '/src/components/ReadOnlyInline'
 - `reference` : Une chaîne de caractères correspondant au nom d'une référence DOM pour créer le lien vers sa page.
 - `alt` <OptionnalInline /> : Un texte alternatif qui sera rendu à la place du nom de la référence, c'est utile pour afficher du code avancé comme `appendChild()` à la place de  `Element.appendChild` lorsque vous parlez de la méthode `appendChild()`.
 - `ancre` <OptionnalInline /> : Une chaîne de caractères correspondant à un titre contenu dans la page. Il faut écrire l'ancre comme expliqué dans [notre guide des liens internes](/docs/guides/les-ancres-des-liens-internes#les-liens-internes).
-- `desactiver-code` <OptionnalInline /> : Une valeur booléenne qui définit si l'élément est formatté comme du code ou du texte. La valeur par défaut est `false` ce qui rend un code en ligne. Vous pouvez utiliser `0` ou `1`.
+- `desactiver-code` <OptionnalInline /> : Une valeur booléenne qui définit si l'élément est formaté comme du code ou du texte. La valeur par défaut est `false` ce qui rend un code en ligne. Vous pouvez utiliser `0` ou `1`.
 
   :::tip
   Par exemple, pour appeler une API dans un paragraphe, sous la forme de texte, voici ce que vous pouvez écrire :
@@ -84,7 +84,7 @@ import { ReadOnlyInline } from '/src/components/ReadOnlyInline'
 - `alt` <OptionnalInline /> : Un texte alternatif qui sera rendu à la place du nom de l'élément HTML.
   
   :::warning
-  Remplir cette valeur a pour effet de changer le code en texte, cela veut dire que vous ne rendrez pas un bloc de code. C'est utile quand vous vous appeler les titres `<h1>` à `<h6>` qui ne sont pas répertoriés comme des éléments HTML mais `Heading_Elements`.
+  Remplir cette valeur a pour effet de changer le code en texte, cela veut dire que vous ne rendrez pas un bloc de code. C'est utile quand vous appelez les titres `<h1>` à `<h6>` qui ne sont pas répertoriés comme des éléments HTML mais `Heading_Elements`.
 
   ```markdown
   `{{HTMLElement("Heading_Elements", "&lt;h1&gt;")}}`
@@ -94,7 +94,7 @@ import { ReadOnlyInline } from '/src/components/ReadOnlyInline'
   :::
 
   :::info[Note]
-  Cela permet de créer des éléments personnalisés plus complet, comme lorsque vous voulez écrire un élément de champ de formulaire typé, par exemple avec un champ de date :
+  Cela permet de créer des éléments personnalisés plus complets, comme lorsque vous voulez écrire un élément de champ de formulaire typé, par exemple avec un champ de date :
 
   ```markdown
   `{{HTMLElement("input/date", "&lt;input type=\"date\"&gt;")}}`
@@ -106,35 +106,35 @@ import { ReadOnlyInline } from '/src/components/ReadOnlyInline'
 #### `{{HTTPHeader(reference, [alt, [ancre, [desactiver-code]]])}}`
 
 - `reference` : Une chaîne de caractères correspondant au nom d'un en-tête HTTP pour créer le lien vers sa page.
-- `alt` <OptionnalInline /> : Un texte alternatif qui sera rendu à la place du nom de l'en-tête HTTP, par exemple pour rendre une valeur avec l'en-tête choisie.
+- `alt` <OptionnalInline /> : Un texte alternatif qui sera rendu à la place du nom de l'en-tête HTTP, par exemple pour rendre une valeur avec l'en-tête choisi.
 - `ancre` <OptionnalInline /> : Une chaîne de caractères correspondant à un titre contenu dans la page. Il faut écrire l'ancre comme expliqué dans [notre guide des liens internes](/docs/guides/les-ancres-des-liens-internes#les-liens-internes).
-- `desactiver-code` <OptionnalInline /> : Une valeur booléenne qui définit si l'élément est formatté comme du code ou du texte. La valeur par défaut est `false` ce qui rend un code en ligne. Vous pouvez utiliser `0` ou `1`.
+- `desactiver-code` <OptionnalInline /> : Une valeur booléenne qui définit si l'élément est formaté comme du code ou du texte. La valeur par défaut est `false` ce qui rend un code en ligne. Vous pouvez utiliser `0` ou `1`.
 
 #### `{{HTTPMethod(reference, [alt, [ancre, [desactiver-code]]])}}`
 
 - `reference` : Une chaîne de caractères correspondant au nom d'une méthode HTTP pour créer le lien vers sa page.
 - `alt` <OptionnalInline /> : Un texte alternatif qui sera rendu à la place du nom de la méthode HTTP, par exemple pour rendre une valeur avec la méthode choisie.
 - `ancre` <OptionnalInline /> : Une chaîne de caractères correspondant à un titre contenu dans la page. Il faut écrire l'ancre comme expliqué dans [notre guide des liens internes](/docs/guides/les-ancres-des-liens-internes#les-liens-internes).
-- `desactiver-code` <OptionnalInline /> : Une valeur booléenne qui définit si l'élément est formatté comme du code ou du texte. La valeur par défaut est `false` ce qui rend un code en ligne. Vous pouvez utiliser `0` ou `1`.
+- `desactiver-code` <OptionnalInline /> : Une valeur booléenne qui définit si l'élément est formaté comme du code ou du texte. La valeur par défaut est `false` ce qui rend un code en ligne. Vous pouvez utiliser `0` ou `1`.
 
 #### `{{HTTPStatus(reference, [alt, [ancre, [desactiver-code]]])}}`
 
 - `reference` : Une chaîne de caractères correspondant au nom d'un statut HTTP pour créer le lien vers sa page.
 - `alt` <OptionnalInline /> : Un texte alternatif qui sera rendu à la place du nom du statut HTTP, par exemple pour rendre une valeur avec le statut choisi.
 - `ancre` <OptionnalInline /> : Une chaîne de caractères correspondant à un titre contenu dans la page. Il faut écrire l'ancre comme expliqué dans [notre guide des liens internes](/docs/guides/les-ancres-des-liens-internes#les-liens-internes).
-- `desactiver-code` <OptionnalInline /> : Une valeur booléenne qui définit si l'élément est formatté comme du code ou du texte. La valeur par défaut est `false` ce qui rend un code en ligne. Vous pouvez utiliser `0` ou `1`.
+- `desactiver-code` <OptionnalInline /> : Une valeur booléenne qui définit si l'élément est formaté comme du code ou du texte. La valeur par défaut est `false` ce qui rend un code en ligne. Vous pouvez utiliser `0` ou `1`.
 
 #### `{{JSxRef(reference, [alt, [ancre, [desactiver-code]]])}}`
 
 - `reference` : Une chaîne de caractères correspondant au nom d'une référence JavaScript pour créer le lien vers sa page.
 
   :::info
-  Par défaut, si vous ne signalez pas de dossier parent avant la référence, le dosseri utilisé sera `Global_Objects`. De plus `.prototype.` sera automatiquement ignoré et remplacé par `/` dans le lien.
+  Par défaut, si vous ne signalez pas de dossier parent avant la référence, le dossier utilisé sera `Global_Objects`. De plus `.prototype.` sera automatiquement ignoré et remplacé par `/` dans le lien.
   :::
 
 - `alt` <OptionnalInline /> : Un texte alternatif qui sera rendu à la place du nom de la référence JavaScript, c'est utile pour afficher du code avancé comme `map()` à la place de  `Array.prototype.map` lorsque vous parlez de la méthode `map()`. Ou bien lorsque vous faites référence à une instruction, par exemple avec `Statements/let`, pour n'afficher que `let`.
 - `ancre` <OptionnalInline /> : Une chaîne de caractères correspondant à un titre contenu dans la page. Il faut écrire l'ancre comme expliqué dans [notre guide des liens internes](/docs/guides/les-ancres-des-liens-internes#les-liens-internes).
-- `desactiver-code` <OptionnalInline /> : Une valeur booléenne qui définit si l'élément est formatté comme du code ou du texte. La valeur par défaut est `false` ce qui rend un code en ligne. Vous pouvez utiliser `0` ou `1`.
+- `desactiver-code` <OptionnalInline /> : Une valeur booléenne qui définit si l'élément est formaté comme du code ou du texte. La valeur par défaut est `false` ce qui rend un code en ligne. Vous pouvez utiliser `0` ou `1`.
 
 #### `{{MathMLElement(reference)}}`
 
@@ -220,7 +220,7 @@ Cet élément ne prend aucun paramètre. C'est une version raccourcie de [`{{See
 
 Cet élément ne prend aucun paramètre.
 
-Cette bannière signale que la fonctionnalité n'est pas standardisée, c'est à dire qu'elle n'est pas définie par une spécification ou n'est pas en voie d'être standardisée. Sont utilisation en environnement de production est fortement déconseillée.
+Cette bannière signale que la fonctionnalité n'est pas standardisée, c'est à dire qu'elle n'est pas définie par une spécification ou n'est pas en voie d'être standardisée. Son utilisation en environnement de production est fortement déconseillée.
 
 #### `{{Non-standard_Inline}}`
 
@@ -260,7 +260,7 @@ Cet élément ne prend aucun paramètre. C'est une version raccourcie de [`{{Sec
 
 Cet élément ne prend aucun paramètre.
 
-Cette bannière signale que la fonctionnalité décrite est expérimentale et peut donc fortement changer à l'avenir. Il est donc recommandé de ne pas l'utiliser en environnement de production au risque de renctonter des comportements innatendues entres les navigateurs ; ou de voir la fonctionnalité absentes des navigateurs qui ne la prennent pas encore en charge.
+Cette bannière signale que la fonctionnalité décrite est expérimentale et peut donc fortement changer à l'avenir. Il est donc recommandé de ne pas l'utiliser en environnement de production au risque de rencontrer des comportements inattendus entre les navigateurs ; ou de voir la fonctionnalité absente des navigateurs qui ne la prennent pas encore en charge.
 
 ### Les macros d'exemples interactifs
 
@@ -295,7 +295,7 @@ Vous pouvez retrouver un exemple de l'utilisation des macros d'exemples dans [no
 - `non-utilisé-2` <OptionnalInline /> : Ce paramètre n'est pas utilisé. Il faut simplement écrire une chaîne de caractères vide (`""`).
 - `non-utilisé-3` <OptionnalInline /> : Ce paramètre n'est pas utilisé. Il faut simplement écrire une chaîne de caractères vide (`""`).
 - `fonctionnalités-autorisées` <OptionnalInline /> : Une chaîne de caractères correspondant aux fonctionnalités autorisées pour l'exemple. Par exemple, pour autoriser les fonctionnalités de la catégorie « geolocation », il faut écrire `geolocation`.
-- `bas-à-sable` <OptionnalInline /> : Une chaîne de caractères correspondant aux fonctionnalitées que l'on souhaite autoriser dans l'élément `<iframe>` de l'exemple. Les valeurs possibles sont : `allow-modals`, `allow-forms` et `allow-popups` pour permettre dans l'odre : l'utilisation de fenêtres contextuelles, de formulaires et de fenêtres affichées par-dessus le contenu.
+- `bas-à-sable` <OptionnalInline /> : Une chaîne de caractères correspondant aux fonctionnalités que l'on souhaite autoriser dans l'élément `<iframe>` de l'exemple. Les valeurs possibles sont : `allow-modals`, `allow-forms` et `allow-popups` pour permettre dans l'ordre : l'utilisation de fenêtres contextuelles, de formulaires et de fenêtres affichées par-dessus le contenu.
 
   :::tip
   Par exemple :
@@ -367,7 +367,7 @@ Cet élément ne prend aucun paramètre. Cela affiche tous les tableaux de compa
 
 ### Les macros de menus pour Guides et Tutoriels d'apprentissage
 
-Les macros suivantes affichent des liens ne navigation vers les pages précédentes, suivantes et d'accueil des guides, tutoriels et catégories d'apprentissage.
+Les macros suivantes affichent des liens de navigation vers les pages précédentes, suivantes et d'accueil des guides, tutoriels et catégories d'apprentissage.
 
 #### `{{Next(chemin-suivant)}}`
 

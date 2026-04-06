@@ -17,7 +17,7 @@ Il existe deux types d'exemples en direct :
 
 ### Les exemples interactifs
 
-Ces exemples utilisent une macro spéciale qui est située au dessus des blocs de codes qui lui seront donnés grâce aux mots clés dédiés.
+Ces exemples utilisent une macro spéciale qui est située au-dessus des blocs de codes qui lui seront donnés grâce aux mots clés dédiés.
 
 La macro utilisée est nommée `InteractiveExample`, nous la voyons plus en détails dans [nos explications sur les macros](/docs/guides/les-macros-et-leur-fonctionnement).
 
@@ -27,9 +27,9 @@ Pour mieux comprendre ce que fait ce bloc interactif, nous allons vous présente
 
 ##### Markdown
 
-Nous commençons par appeler la macro `{{InteractiveExample}}` et on lui attribut un titre qui sera affiché dans le bloc rendu. On ajoute juste après cette macro, [les divers blocs de code](/docs/guides/les-blocs-de-codes) qui seront interprétés selon la clé qui leur est donnée :
+Nous commençons par appeler la macro `{{InteractiveExample}}` et on lui attribue un titre qui sera affiché dans le bloc rendu. On ajoute juste après cette macro, [les divers blocs de code](/docs/guides/les-blocs-de-codes) qui seront interprétés selon la clé qui leur est donnée :
 
-- `interactive-example-choice` : Le bloc de code sera affiché comme un choix clicable.
+- `interactive-example-choice` : Le bloc de code sera affiché comme un choix cliquable.
 - `interactive-example` : Le bloc de code sera interprété comme le code à transformer dans le rendu.
 
 ````markdown
@@ -98,7 +98,7 @@ Nous commençons par appeler la macro `{{InteractiveExample}}` et on lui attribu
   ```
 ````
 
-Voir [les autres options de `InteractiveExample`](/docs/guides/les-blocs-de-codes#le-bloc-de-code-intégré-dans-un-exemple-interactif) pour connaitre les différents blocs qui existent.
+Voir [les autres options de `InteractiveExample`](/docs/guides/les-blocs-de-codes#le-bloc-de-code-intégré-dans-un-exemple-interactif) pour connaître les différents blocs qui existent.
 
 ##### Résultat
 
@@ -143,7 +143,7 @@ Il existe des particularités pour les blocs de code que nous présentons dans l
 
 Le fait que nous utilisons des éléments disponibles dans la page et donc des blocs de codes accessibles dans la page, lors de la traduction, cela nous permet de traduire complètement les exemples.
 
-De ce fait, nous traduisons tous les textes présents dans les blocs de code, les commentaires et également le code lui même.
+De ce fait, nous traduisons tous les textes présents dans les blocs de code, les commentaires et également le code lui-même.
 
 Cela permet entre autres aux apprennant·e·s de comprendre d'avantage ce que sont les éléments présentés dans le code.
 
@@ -187,4 +187,4 @@ Alors que cela sera fonctionnel et compréhensible de cette manière :
 
 ## Résumé
 
-Nous avons vu les différents types d'exemples interactifs que nous utilisons pour expliquer des fonctionnalités du web. Ces éléments sont présents en grande quantité dans la documentation et nécescitent une attention particulière pour que ces derniers continuent de fonctionner lors de leur traduction.
+Nous avons vu les différents types d'exemples interactifs que nous utilisons pour expliquer des fonctionnalités du web. Ces éléments sont présents en grande quantité dans la documentation et nécessitent une attention particulière pour que ces derniers continuent de fonctionner lors de leur traduction.
