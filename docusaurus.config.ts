@@ -17,6 +17,7 @@ const config: Config = {
 
   organizationName: 'mdn-fr',
   projectName: 'documentation',
+  trailingSlash: false,
 
   onBrokenLinks: 'throw',
 
