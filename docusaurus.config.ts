@@ -135,9 +135,12 @@ const config: Config = {
       copyright: `Copyright © ${new Date().getFullYear()} — Documentation des traducteur·ice·s MDN francophone.<br />Propulsé par Docusaurus.`,
     },
     prism: {
-      additionalLanguages: ['bash'],
-      theme: prismThemes.github,
-      darkTheme: prismThemes.oceanicNext,
+      additionalLanguages: [
+        'bash',
+        'diff'
+      ],
+      theme: prismThemes.vsLight,
+      darkTheme: prismThemes.vsDark,
       magicComments: [
         {
           className: 'theme-code-block-highlighted-line',
