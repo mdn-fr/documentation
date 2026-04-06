@@ -1,0 +1,77 @@
+---
+title: Méthodes avancées pour contribuer sur Github
+slug: /contribuer/methodes-avancees-pour-contribuer-sur-github
+tags: [guides, github, markdown]
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+Maintenant que [votre environnement de travail est installé](/docs/contribuer/mettre-en-place-un-environnement-de-developpement-local), vous pouvez commencer à effectuer des actions pour contribuer au MDN. Avant tout, pensez à lire les [Règles d'écritures](https://developer.mozilla.org/docs/MDN/Writing_guidelines) et les [Règles de conduite](https://developer.mozilla.org/docs/MDN/Community/Community_Participation_Guidelines) avant de contribuer.
+
+## Ajouter ou modifier du contenu
+
+Comme nous l'avons expliqué concernant [les chemins vers les fichiers](/docs/contribuer/mettre-en-place-son-depot-bifurque#bifurquer-le-dépôt-principal), vous allez devoir travailler selon les chemins des pages. De ce fait, pour modifier une page, ou ajouter une page, vous devez le faire de manière à ce que les dossiers correspondent au chemin de la page dans `slug`.
+
+Pour reprendre l'exemple de l'attribut universel HTML `title`, le chemin vers son fichier `index.md` se trouverait :
+
+```plain title="Structure vers « files/fr/web/html/reference/global_attributes/title/index.md »"
+📂 files/fr
+└─ 📂 web
+   └─ 📂 html
+      └─ 📂 reference
+         └─ 📂 global_attributes
+            └─ 📂 title
+               └─ 📄 index.md
+```
+
+Afin de créer ou modifier une page, comme présentée ci-dessus, vous devrez donc créer la même structure de dossier jusqu'au fichier `index.md` qui contiendra le contenu de la page.
+Les pages doivent être structurées comme présenté dans [notre guide sur la page de garde](/docs/guides/le-front-matter).
+
+Par exemple, la page de garde de notre exemple est le suivant :
+
+```markdown title="files/fr/web/html/reference/global_attributes/title/index.md" showLineNumbers
+---
+title: "Attribut HTML universel : title"
+short-title: title
+slug: Web/HTML/Reference/Global_attributes/title
+l10n:
+  sourceCommit: 5e815d522e796fb2209fa8470616b37e31c572b4
+---
+
+<!-- … -->
+```
+
+Une fois que vous avez créé ou modifié la page souhaitée, vous devrez faire un instantané des modifications comme suit :
+
+```bash
+git add .
+git commit -m "chore(fr): votre message d'instantané ici"
+```
+
+:::note[Remarque]
+Assurez-vous ne bien avoir créé une branche avant de faire votre instantané. Les changements d'une branche `main` vers une branche `main` ne sont pas autorisés, et votre Requête de tirage sera fermée.
+
+<Tabs>
+  <TabItem value="switch" label="git switch" default>
+    ```bash
+    git switch -c <votre-branche>
+    ```
+  </TabItem>
+  <TabItem value="branch" label="git checkout">
+    ```bash
+    git checkout -b <votre-branche>
+    ```
+  </TabItem>
+</Tabs>
+:::
+
+Puis pour que vos modifications soient fusionnées, il faut les pousser sur votre dépôt bifurqué et créer une Requête de tirage sur le dépôt principal.
+
+```bash
+git push <votre-remote> <votre-branche>
+```
+
+## Publier la branche dans une requête de tirage
+
+Voir [la section sur les requêtes de tirage](/docs/contribuer/mettre-en-place-son-depot-bifurque#proposer-des-modifications) dans le guide sur les contributions simples.

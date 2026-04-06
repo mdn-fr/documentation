@@ -1,0 +1,93 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #006464;
+  --ifm-color-primary-dark: #005a5a;
+  --ifm-color-primary-darker: #005555;
+  --ifm-color-primary-darkest: #004646;
+  --ifm-color-primary-light: #006e6e;
+  --ifm-color-primary-lighter: #007373;
+  --ifm-color-primary-lightest: #008282;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #00ffff;
+  --ifm-color-primary-dark: #00e5e6;
+  --ifm-color-primary-darker: #00d9d9;
+  --ifm-color-primary-darkest: #00b2b3;
+  --ifm-color-primary-light: #1affff;
+  --ifm-color-primary-lighter: #26ffff;
+  --ifm-color-primary-lightest: #4dffff;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+code:not([style]) > .code-block {
+  display: block;
+}
+
+.code-block {
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: .2em var(--ifm-pre-padding);
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin-left: 0.5em;
+    position: absolute;
+    right: .4rem;
+    top: .4em;
+    zoom: .75;
+  }
+
+  + .code-block::after {
+    display: none;
+  }
+}
+
+.code-block-bad-example {
+  background-color: #ff000020;
+
+  &::after {
+    background-color: #ff4848;
+    mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWNpcmNsZS14LWljb24gbHVjaWRlLWNpcmNsZS14Ij48Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSIxMCIvPjxwYXRoIGQ9Im0xNSA5LTYgNiIvPjxwYXRoIGQ9Im05IDkgNiA2Ii8+PC9zdmc+');
+  }
+}
+
+.code-block-good-example {
+  background-color: #00ff0020;
+
+  &::after {
+    background-color: #48ff48;
+    mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWNpcmNsZS1jaGVjay1pY29uIGx1Y2lkZS1jaXJjbGUtY2hlY2siPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjEwIi8+PHBhdGggZD0ibTkgMTIgMiAyIDQtNCIvPjwvc3ZnPg==');
+  }
+}
+
+/* Fix wrap behavior for code blocks */
+.prism-code code {
+  white-space: pre-wrap;
+}
+
+.badge-inline {
+  display: inline-block;
+  padding: .1rem .5rem;
+  font-size: .75em;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: .005rem solid rgba(255, 255, 255, .3);
+  border-radius: 5rem;
+
+  [data-theme='light'] & {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-color: rgba(0, 0, 0, .3);
+  }
+}

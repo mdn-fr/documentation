@@ -1,0 +1,9 @@
+guides:
+  label: Guides
+  permalink: /guides
+  description: Guides pour contribuer à la documentation MDN en français
+
+markdown:
+  label: Markdown
+  permalink: /markdown
+  description: Le Markdown est un langage de balisage léger qui permet de formater du texte de manière simple et lisible. Découvrez comment nous utilisons le Markdown pour créer la documentation du MDN en français.

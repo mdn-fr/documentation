@@ -1,0 +1,28 @@
+mdn-fr:
+  name: L'équipe de traduction
+  title: L'équipe de traduction du MDN francophone.
+  url: https://github.com/mdn-fr
+  image_url: https://github.com/mdn-fr.png
+  page: true
+  socials:
+    newsletter: https://app.daily.dev/squads/mdnfr
+
+# Équipe des relecteur·ice·s du MDN français.
+cw118:
+  name: Caroline W.
+  title: Relectrice du MDN depuis 2022.
+  url: https://github.com/cw118
+  image_url: https://github.com/cw118.png
+  socials:
+    github: cw118
+
+tristantheb:
+  name: Tristan D.
+  title: Relecteur du MDN depuis 2021.
+  url: https://github.com/tristantheb
+  image_url: https://github.com/tristantheb.png
+  socials:
+    bluesky: tristantheb.bsky.social
+    github: tristantheb
+    mastodon: "https://piaille.fr/@tristantheb"
+    twitch: RecoilZA

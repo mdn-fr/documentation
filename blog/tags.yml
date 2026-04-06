@@ -1,0 +1,19 @@
+documentation:
+  label: Documentation
+  permalink: /documentation
+  description: La documentation des traducteur·ice·s du MDN français. Retrouvez des guides pour comprendre le MDN et contribuer à la documentation du MDN en français.
+
+guides:
+  label: Guides
+  permalink: /guides
+  description: Guides pour contribuer à la documentation MDN en français
+
+mdn:
+  label: MDN
+  permalink: /mdn
+  description: Votre modèle pour un internet meilleur. Documenter le CSS, le HTML et le JavaScript, depuis 2005.
+
+traduction:
+  label: Traduction
+  permalink: /traduction
+  description: La traduction est un travail de longue haleine, qui demande de la patience et de la rigueur. Découvrez comment nous traduisons le MDN en français.

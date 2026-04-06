@@ -17,8 +17,9 @@ const config: Config = {
 
   organizationName: 'mdn-fr',
   projectName: 'documentation',
+  trailingSlash: false,
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
 
   i18n: {
     defaultLocale: 'fr',
@@ -71,7 +72,7 @@ const config: Config = {
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          sidebarId: 'docs',
           position: 'left',
           label: 'Documentation',
         },
