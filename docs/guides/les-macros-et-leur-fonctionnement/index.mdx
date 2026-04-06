@@ -1,0 +1,409 @@
+---
+title: Les macros et leur fonctionnement
+slug: /guides/les-macros-et-leur-fonctionnement
+tags: [guides, markdown, macros]
+---
+
+Pour rendre des éléments dans la documentation, tels que des liens vers des ressources, des bannières prédéfinies, des exemples, des badges et des barres de navigation ; nous utilisons un élément de code personnalisé nomme « macro ». Elles sont formées par l'ouverture et la fermeture d'accolades doubles `{{` avec le nom de la macro et ses paramètres avant la fermeture `}}`.
+
+:::danger
+La macro `JSFiddleEmbed` est en cours de suppression des pages traduites. Il est fortement recommandé de la supprimer des pages pour la remplacer par `EmbedLiveSample`. Voir le [ticket Github concernant la migration de la macro <sup>(angl.)</sup>](https://github.com/mdn/translated-content/issues/34228).
+:::
+
+## Concepts et utilisation
+
+Les macros sont présentes depuis la version WikiMedia du MDN, elles permettent de manière générale de simplifier la rédaction d'éléments et de rendus qui seraient compliqués à faire avec du simple HTML pour des personnes qui souhaitent écrire ou traduire des pages.
+
+De ce fait, les macros viennent simplifier la rédaction en réduisant les liens à de simple valeurs. Par exemple pour appeler un élément HTML, il suffit d'appeler la macro des éléments HTML, que nous présenterons après, comme ceci :
+
+```markdown
+{{HTMLElement("section")}}
+```
+
+ce qui donnera en html :
+
+```html
+<a href="/fr/docs/Web/HTML/Reference/Elements/section">
+  <code>&lt;section&gt;</code>
+</a>
+```
+
+Comme vous pouvez le remarquez, la longueur du contenu écrit est bien plus courte.
+Cela n'empêche pas d'utiliser l'écriture markdown pour appeler le même lien, mais le faire aura pour effet de prolonger la longueur du code écrit en Markdown et rendra difficile la lecture de la page Markdown pour une personne qui éditerait cette page.
+
+```markdown
+[`<section>`](/fr/docs/Web/HTML/Reference/Elements/section)
+```
+
+:::note[Outil utile]
+Il existe [un plugin VSCode pour effectuer la coloration syntaxique des macros](https://marketplace.visualstudio.com/items?itemName=tristantheb.mdn-macros-syntax). Cela peut vous être utile pour différencier les macros dans le texte.
+:::
+
+## Les différentes macros
+
+import { Trash2, FlaskConical, TriangleAlert, Lock } from 'lucide-react'
+import { Badge } from '/src/components/Badge'
+import { OptionnalInline } from '/src/components/OptionnalInline'
+import { ReadOnlyInline } from '/src/components/ReadOnlyInline'
+
+### Les macros appelant des pages
+
+#### `{{CSP(directive)}}`
+
+- `directive` : Une chaîne de caractères correspondant au nom d'une Politique de Sécurité de Contenu (<i lang="en">Content Security Policy</i>) pour créer le lien vers sa page.
+
+#### `{{CSSxRef(reference, [alt, [ancre]])}}`
+
+- `reference` : Une chaîne de caractères correspondant au nom d'une référence CSS pour créer le lien vers sa page.
+- `alt` <OptionnalInline /> : Un texte alternatif qui sera rendu à la place du nom de la référence, c'est utile pour afficher du code avancé comme `display: none` à la place de  `display` lorsque vous parlez de la valeur de la propriété `display`.
+- `ancre` <OptionnalInline /> : Une chaîne de caractères correspondant à un titre contenu dans la page. Il faut écrire l'ancre comme expliqué dans [notre guide des liens internes](/docs/guides/les-ancres-des-liens-internes#les-liens-internes).
+
+#### `{{DOMxRef(reference, [alt, [ancre, [desactiver-code]]])}}`
+
+- `reference` : Une chaîne de caractères correspondant au nom d'une référence DOM pour créer le lien vers sa page.
+- `alt` <OptionnalInline /> : Un texte alternatif qui sera rendu à la place du nom de la référence, c'est utile pour afficher du code avancé comme `appendChild()` à la place de  `Element.appendChild` lorsque vous parlez de la méthode `appendChild()`.
+- `ancre` <OptionnalInline /> : Une chaîne de caractères correspondant à un titre contenu dans la page. Il faut écrire l'ancre comme expliqué dans [notre guide des liens internes](/docs/guides/les-ancres-des-liens-internes#les-liens-internes).
+- `desactiver-code` <OptionnalInline /> : Une valeur booléenne qui définit si l'élément est formatté comme du code ou du texte. La valeur par défaut est `false` ce qui rend un code en ligne. Vous pouvez utiliser `0` ou `1`.
+
+  :::tip
+  Par exemple, pour appeler une API dans un paragraphe, sous la forme de texte, voici ce que vous pouvez écrire :
+
+  ```markdown
+  Cela fait référence à {{DOMxRef("Audio API", "l'API Audio", "", 1)}}.
+  ```
+  :::
+
+#### `{{Glossary(reference, [alt])}}`
+
+- `reference` : Une chaîne de caractères correspondant au nom d'une entrée du glossaire pour créer le lien vers sa page.
+- `alt` <OptionnalInline /> : Un texte alternatif qui sera rendu à la place du nom de l'entrée du glossaire, c'est également utile lorsque le nom de l'entrée du glossaire peut être traduite.
+
+#### `{{HTMLElement(reference, [alt, [ancre]])}}`
+
+- `reference` : Une chaîne de caractères correspondant au nom d'un élément HTML pour créer le lien vers sa page.
+- `alt` <OptionnalInline /> : Un texte alternatif qui sera rendu à la place du nom de l'élément HTML.
+  
+  :::warning
+  Remplir cette valeur a pour effet de changer le code en texte, cela veut dire que vous ne rendrez pas un bloc de code. C'est utile quand vous vous appeler les titres `<h1>` à `<h6>` qui ne sont pas répertoriés comme des éléments HTML mais `Heading_Elements`.
+
+  ```markdown
+  `{{HTMLElement("Heading_Elements", "&lt;h1&gt;")}}`
+  ```
+
+  Nous ajoutons des backticks autour pour rendre à nouveau un élément de code en ligne.
+  :::
+
+  :::info[Note]
+  Cela permet de créer des éléments personnalisés plus complet, comme lorsque vous voulez écrire un élément de champ de formulaire typé, par exemple avec un champ de date :
+
+  ```markdown
+  `{{HTMLElement("input/date", "&lt;input type=\"date\"&gt;")}}`
+  ```
+  :::
+
+- `ancre` <OptionnalInline /> : Une chaîne de caractères correspondant à un titre contenu dans la page. Il faut écrire l'ancre comme expliqué dans [notre guide des liens internes](/docs/guides/les-ancres-des-liens-internes#les-liens-internes).
+
+#### `{{HTTPHeader(reference, [alt, [ancre, [desactiver-code]]])}}`
+
+- `reference` : Une chaîne de caractères correspondant au nom d'un en-tête HTTP pour créer le lien vers sa page.
+- `alt` <OptionnalInline /> : Un texte alternatif qui sera rendu à la place du nom de l'en-tête HTTP, par exemple pour rendre une valeur avec l'en-tête choisie.
+- `ancre` <OptionnalInline /> : Une chaîne de caractères correspondant à un titre contenu dans la page. Il faut écrire l'ancre comme expliqué dans [notre guide des liens internes](/docs/guides/les-ancres-des-liens-internes#les-liens-internes).
+- `desactiver-code` <OptionnalInline /> : Une valeur booléenne qui définit si l'élément est formatté comme du code ou du texte. La valeur par défaut est `false` ce qui rend un code en ligne. Vous pouvez utiliser `0` ou `1`.
+
+#### `{{HTTPMethod(reference, [alt, [ancre, [desactiver-code]]])}}`
+
+- `reference` : Une chaîne de caractères correspondant au nom d'une méthode HTTP pour créer le lien vers sa page.
+- `alt` <OptionnalInline /> : Un texte alternatif qui sera rendu à la place du nom de la méthode HTTP, par exemple pour rendre une valeur avec la méthode choisie.
+- `ancre` <OptionnalInline /> : Une chaîne de caractères correspondant à un titre contenu dans la page. Il faut écrire l'ancre comme expliqué dans [notre guide des liens internes](/docs/guides/les-ancres-des-liens-internes#les-liens-internes).
+- `desactiver-code` <OptionnalInline /> : Une valeur booléenne qui définit si l'élément est formatté comme du code ou du texte. La valeur par défaut est `false` ce qui rend un code en ligne. Vous pouvez utiliser `0` ou `1`.
+
+#### `{{HTTPStatus(reference, [alt, [ancre, [desactiver-code]]])}}`
+
+- `reference` : Une chaîne de caractères correspondant au nom d'un statut HTTP pour créer le lien vers sa page.
+- `alt` <OptionnalInline /> : Un texte alternatif qui sera rendu à la place du nom du statut HTTP, par exemple pour rendre une valeur avec le statut choisi.
+- `ancre` <OptionnalInline /> : Une chaîne de caractères correspondant à un titre contenu dans la page. Il faut écrire l'ancre comme expliqué dans [notre guide des liens internes](/docs/guides/les-ancres-des-liens-internes#les-liens-internes).
+- `desactiver-code` <OptionnalInline /> : Une valeur booléenne qui définit si l'élément est formatté comme du code ou du texte. La valeur par défaut est `false` ce qui rend un code en ligne. Vous pouvez utiliser `0` ou `1`.
+
+#### `{{JSxRef(reference, [alt, [ancre, [desactiver-code]]])}}`
+
+- `reference` : Une chaîne de caractères correspondant au nom d'une référence JavaScript pour créer le lien vers sa page.
+
+  :::info
+  Par défaut, si vous ne signalez pas de dossier parent avant la référence, le dosseri utilisé sera `Global_Objects`. De plus `.prototype.` sera automatiquement ignoré et remplacé par `/` dans le lien.
+  :::
+
+- `alt` <OptionnalInline /> : Un texte alternatif qui sera rendu à la place du nom de la référence JavaScript, c'est utile pour afficher du code avancé comme `map()` à la place de  `Array.prototype.map` lorsque vous parlez de la méthode `map()`. Ou bien lorsque vous faites référence à une instruction, par exemple avec `Statements/let`, pour n'afficher que `let`.
+- `ancre` <OptionnalInline /> : Une chaîne de caractères correspondant à un titre contenu dans la page. Il faut écrire l'ancre comme expliqué dans [notre guide des liens internes](/docs/guides/les-ancres-des-liens-internes#les-liens-internes).
+- `desactiver-code` <OptionnalInline /> : Une valeur booléenne qui définit si l'élément est formatté comme du code ou du texte. La valeur par défaut est `false` ce qui rend un code en ligne. Vous pouvez utiliser `0` ou `1`.
+
+#### `{{MathMLElement(reference)}}`
+
+- `reference` : Une chaîne de caractères correspondant au nom d'un élément MathML pour créer le lien vers sa page.
+
+#### `{{RFC(numéro-du-rfc, [texte-additionnel, [section]])}}`
+
+- `numéro-du-rfc` : Un nombre vers le numéro d'une page RFC pour créer le lien vers sa page. Cela rendra `RFC 9114`.
+- `texte-additionnel` <OptionnalInline /> : Un texte qui sera ajouté à à la suite du numéro pour afficher le titre du RFC, par exemple `RFC 9114 : HTTP/3`.
+- `section` <OptionnalInline /> : Une chaîne de caractères correspondant à un titre contenu dans la page du site du RFC.
+
+:::note
+Contrairement aux macros de liens interne, la macro `RFC` dirige vers une ressource externe écrite exclusivement en anglais.
+:::
+
+#### `{{SVGAttr(attribut)}}`
+
+- `attribut` : Une chaîne de caractères correspondant au nom d'un attribut SVG pour créer le lien vers sa page.
+
+#### `{{SVGElement(element)}}`
+
+- `element` : Une chaîne de caractères correspondant au nom d'un élément SVG pour créer le lien vers sa page.
+
+### Les macros appelant une barre de navigation
+
+#### `{{APIRef([nom-api])}}`
+
+- `nom-api` <OptionnalInline /> : Une chaîne de caractères correspondant au nom d'une API pour créer le lien vers sa page. Si ce paramètre est laissé vide, la barre de navigation affichera une liste par défaut.
+
+#### `{{DefaultAPISidebar([nom-api])}}`
+
+- `nom-api` <OptionnalInline /> : Une chaîne de caractères correspondant au nom d'une API pour créer le lien vers sa page d'arrivée. Cela utilise le paramètre `landing-page` des pages anglaises.
+
+#### Macros de navigation obsolètes
+
+Les macros suivantes sont obsolètes et doivent être retirées des pages si vous les rencontrez.
+
+- `AddonSidebar` <Badge text="Obsolète" color="#cc2626" />
+- `GlossarySidebar` <Badge text="Obsolète" color="#cc2626" />
+- `HTMLSidebar` <Badge text="Obsolète" color="#cc2626" />
+- `JsSidebar` <Badge text="Obsolète" color="#cc2626" />
+- `LearnSidebar` <Badge text="Obsolète" color="#cc2626" />
+- `MathMLRef` <Badge text="Obsolète" color="#cc2626" />
+- `MDNSidebar` <Badge text="Obsolète" color="#cc2626" />
+- `PWASidebar` <Badge text="Obsolète" color="#cc2626" />
+- `SVGRef` <Badge text="Obsolète" color="#cc2626" />
+- `WebAssemblySidebar` <Badge text="Obsolète" color="#cc2626" />
+- `XsltSidebar` <Badge text="Obsolète" color="#cc2626" />
+
+### Les macros appelant des bannières et badges
+
+#### `{{AvailableInWorkers}}`
+
+<Badge text="Bannière" color="#2299ff" /> <ReadOnlyInline />
+
+Cet élément ne prend aucun paramètre.
+
+Affiche une bannière signalant que la fonctionnalité est disponible dans les travailleurs web (<i lang="en">Web Workers</i> en anglais).
+
+#### `{{Deprecated_Header}}`
+
+<Badge text="Bannière" color="#2299ff" /> <ReadOnlyInline />
+
+Cet élément ne prend aucun paramètre.
+
+Cette bannière signale que la fonctionnalité est obsolète, c'est à dire qu'elle est déconseillée à l'utilisation et qu'elle peut être supprimée dans le futur.
+
+#### `{{Deprecated_Inline}}`
+
+<Badge text="Icône" color="#11aa66" /> <ReadOnlyInline />
+
+Cet élément ne prend aucun paramètre. C'est une version raccourcie de [`{{Deprecated_Header}}`](#deprecated_header) sous le format d'une icône <Trash2 size={16} /> (icône de poubelle).
+
+#### `{{Experimental_Inline}}`
+
+<Badge text="Icône" color="#11aa66" /> <ReadOnlyInline />
+
+Cet élément ne prend aucun paramètre. C'est une version raccourcie de [`{{SeeCompatTable}}`](#seecompattable) sous le format d'une icône <FlaskConical size={16} /> (icône de flacon conique).
+
+#### `{{Non-standard_Header}}`
+
+<Badge text="Bannière" color="#2299ff" /> <ReadOnlyInline />
+
+Cet élément ne prend aucun paramètre.
+
+Cette bannière signale que la fonctionnalité n'est pas standardisée, c'est à dire qu'elle n'est pas définie par une spécification ou n'est pas en voie d'être standardisée. Sont utilisation en environnement de production est fortement déconseillée.
+
+#### `{{Non-standard_Inline}}`
+
+<Badge text="Icône" color="#11aa66" /> <ReadOnlyInline />
+
+Cet élément ne prend aucun paramètre. C'est une version raccourcie de [`{{Non-standard_Header}}`](#non-standard_header) sous le format d'une icône <TriangleAlert size={16} /> (icône d'un point d'exclamation dans un triangle).
+
+#### `{{Optional_Inline}}`
+
+<Badge text="Badge" color="#804090" /> <ReadOnlyInline />
+
+Cet élément ne prend aucun paramètre et rend un badge avec écrit « <OptionnalInline /> ».
+
+#### `{{ReadOnlyInline}}`
+
+<Badge text="Badge" color="#804090" /> <ReadOnlyInline />
+
+Cet élément ne prend aucun paramètre et rend un badge avec écrit « <ReadOnlyInline /> ».
+
+#### `{{SecureContext_Header}}`
+
+<Badge text="Bannière" color="#2299ff" /> <ReadOnlyInline />
+
+Cet élément ne prend aucun paramètre.
+
+La bannière signale que la fonctionnalité n'est disponible que dans un contexte sécurisé, c'est à dire dans une page chargée en HTTPS ou dans un environnement de confiance.
+
+#### `{{SecureContext_Inline}}`
+
+<Badge text="Icône" color="#11aa66" /> <ReadOnlyInline />
+
+Cet élément ne prend aucun paramètre. C'est une version raccourcie de [`{{SecureContext_Header}}`](#securecontext_header) sous le format d'une icône <Lock size={16} /> (icône de cadenas).
+
+#### `{{SeeCompatTable}}`
+
+<Badge text="Bannière" color="#2299ff" /> <ReadOnlyInline />
+
+Cet élément ne prend aucun paramètre.
+
+Cette bannière signale que la fonctionnalité décrite est expérimentale et peut donc fortement changer à l'avenir. Il est donc recommandé de ne pas l'utiliser en environnement de production au risque de renctonter des comportements innatendues entres les navigateurs ; ou de voir la fonctionnalité absentes des navigateurs qui ne la prennent pas encore en charge.
+
+### Les macros d'exemples interactifs
+
+Vous pouvez retrouver un exemple de l'utilisation des macros d'exemples dans [notre explication des exemples interactifs](/docs/guides/les-exemples-interactifs#les-exemples-interactifs) et [des exemples de rendus](/docs/guides/les-exemples-interactifs#les-blocs-de-résultat-dexemple).
+
+#### `{{EmbedGHLiveSample(url, [largeur, [hauteur]])}}`
+
+- `url` : Une chaîne de caractères correspondant à l'URL d'un exemple sur Github.
+- `largeur` <OptionnalInline /> : Une valeur de largeur en format Nombre ou Pourcentage, par exemple `600` ou `100%`. Il est également possible d'écrire la valeur en pixels CSS, mais ne pas signaler l'unité rend le même résultat.
+- `hauteur` <OptionnalInline /> : Une valeur de hauteur en format Nombre ou Pourcentage, par exemple `400` ou `100%`. Il est également possible d'écrire la valeur en pixels CSS, mais ne pas signaler l'unité rend le même résultat.
+
+#### `{{EmbedLiveSample(titre, [largeur, [hauteur, [non-utilisé-1, [non-utilisé-2, [non-utilisé-3, [fonctionnalités-autorisées, [bas-à-sable]]]]]]])}}`
+
+- `titre` : Une chaîne de caractères correspondant au titre de la section ou se situe l'exemple. Cela peut être au format de fragment d'URL ou le titre directement.
+
+  :::tip
+  Par exemple :
+
+  ```markdown
+  {{EmbedLiveSample("Exemple simple", 600, 400)}}
+  ```
+
+  ou
+
+  ```markdown
+  {{EmbedLiveSample("exemple_simple", 600, 400)}}
+  ```
+
+- `largeur` <OptionnalInline /> : Une valeur de largeur en format Nombre ou Pourcentage, par exemple `600` ou `100%`. Il est également possible d'écrire la valeur en pixels CSS, mais ne pas signaler l'unité rend le même résultat.
+- `hauteur` <OptionnalInline /> : Une valeur de hauteur en format Nombre ou Pourcentage, par exemple `400` ou `100%`. Il est également possible d'écrire la valeur en pixels CSS, mais ne pas signaler l'unité rend le même résultat.
+- `non-utilisé-1` <OptionnalInline /> : Ce paramètre n'est pas utilisé. Il faut simplement écrire une chaîne de caractères vide (`""`).
+- `non-utilisé-2` <OptionnalInline /> : Ce paramètre n'est pas utilisé. Il faut simplement écrire une chaîne de caractères vide (`""`).
+- `non-utilisé-3` <OptionnalInline /> : Ce paramètre n'est pas utilisé. Il faut simplement écrire une chaîne de caractères vide (`""`).
+- `fonctionnalités-autorisées` <OptionnalInline /> : Une chaîne de caractères correspondant aux fonctionnalités autorisées pour l'exemple. Par exemple, pour autoriser les fonctionnalités de la catégorie « geolocation », il faut écrire `geolocation`.
+- `bas-à-sable` <OptionnalInline /> : Une chaîne de caractères correspondant aux fonctionnalitées que l'on souhaite autoriser dans l'élément `<iframe>` de l'exemple. Les valeurs possibles sont : `allow-modals`, `allow-forms` et `allow-popups` pour permettre dans l'odre : l'utilisation de fenêtres contextuelles, de formulaires et de fenêtres affichées par-dessus le contenu.
+
+  :::tip
+  Par exemple :
+
+  ```markdown
+  {{EmbedLiveSample("Utiliser `prompt()`", "", "", "", "", "", "", "allow-popups")}}
+  ```
+
+  ou
+
+  ```markdown
+  {{EmbedLiveSample("utiliser_prompt", "", "", "", "", "", "", "allow-popups")}}
+  ```
+
+#### `{{InteractiveExample(titre, [hauteur-supportée])}}`
+
+- `titre` : Une chaîne de caractères qui sera affichée en titre de l'élément rendu.
+- `hauteur-supportée` <OptionnalInline /> : Une chaîne de caractères permettant de modifier la hauteur du bloc d'exemple interactif rendu. Les valeurs possibles sont : `shorter`, `taller`, `tabbed-shorter`, `tabbed-standard`, `tabbed-taller`.
+
+#### `{{JSFiddleEmbed(url)}}`
+
+:::danger[Obsolète]
+Cette macro est en cours de suppression et ne doit plus être utilisée.
+:::
+
+Anciennement, cette macro permettait de rendre un exemple à partir d'un lien vers JSFiddle.
+
+- `url` : Une chaîne de caractères correspondant à l'URL d'un exemple JSFiddle.
+
+#### `{{LiveSampleLink(titre)}}`
+
+- `titre` : Une chaîne de caractères qui correspond au titre de la section où se situe l'exemple pour créer un lien vers un example interactif qui utilisera le code inclus dans la section de ce titre.
+
+### Les macros de définitions
+
+#### `{{Compat}}` <ReadOnlyInline />
+
+Cet élément ne prend aucun paramètre. Cela affiche le tableau de compatibilité de la fonctionnalité présentée. Le tableau est paramétré depuis la page anglaise.
+
+#### `{{CSSInfo}}` <ReadOnlyInline />
+
+Cet élément ne prend aucun paramètre. Cela affiche les informations des définitions formelles d'une référence CSS. Les informations sont paramétrées depuis la page anglaise.
+
+#### `{{CSSSyntax}}` <ReadOnlyInline />
+
+Cet élément ne prend aucun paramètre. Cela affiche les syntaxes formelles d'une référence CSS. Les informations sont paramétrées depuis la page anglaise.
+
+#### `{{InheritanceDiagram}}` <ReadOnlyInline />
+
+Cet élément ne prend aucun paramètre. Cela affiche le diagramme d'héritage d'une référence API. Le diagramme est paramétré depuis la page anglaise.
+
+#### `{{js_property_attributes(modifable, énumérable, configurable)}}`
+
+- `modifable` : Une valeur booléenne qui définit si la propriété est modifiable ou non. Vous pouvez utiliser `0` ou `1`.
+- `énumérable` : Une valeur booléenne qui définit si la propriété est énumérable ou non. Vous pouvez utiliser `0` ou `1`.
+- `configurable` : Une valeur booléenne qui définit si la propriété est configurable ou non. Vous pouvez utiliser `0` ou `1`.
+
+#### `{{Specifications}}` <ReadOnlyInline />
+
+Cet élément ne prend aucun paramètre. Cela affiche le tableau des spécifications qui décrivent la fonctionnalité présentée. Le tableau est paramétré depuis la page anglaise.
+
+#### `{{SVGInfo}}` <ReadOnlyInline />
+
+Cet élément ne prend aucun paramètre. Cela affiche les informations des définitions formelles d'une référence SVG. Les informations sont paramétrées depuis la page anglaise.
+
+#### `{{WebExtAllCompatTables}}` <ReadOnlyInline />
+
+Cet élément ne prend aucun paramètre. Cela affiche tous les tableaux de compatibilité d'une API WebExtension. Les tableaux sont paramétrés depuis la page anglaise.
+
+### Les macros de menus pour Guides et Tutoriels d'apprentissage
+
+Les macros suivantes affichent des liens ne navigation vers les pages précédentes, suivantes et d'accueil des guides, tutoriels et catégories d'apprentissage.
+
+#### `{{Next(chemin-suivant)}}`
+
+- `chemin-suivant` : Une chaîne de caractère correspondant à une URL interne vers la page suivante du tutoriel, de la catégorie d'apprentissage, du guide.
+
+#### `{{NextMenu(chemin-suivant, chemin-accueil)}}`
+
+- `chemin-suivant` : Une chaîne de caractère correspondant à une URL interne vers la page suivante du tutoriel, de la catégorie d'apprentissage, du guide.
+- `chemin-accueil` : Une chaîne de caractère correspondant à une URL interne vers la page d'accueil du tutoriel, de la catégorie d'apprentissage, du guide.
+
+#### `{{Previous(chemin-précédent)}}`
+
+- `chemin-précédent` : Une chaîne de caractère correspondant à une URL interne vers la page précédente du tutoriel, de la catégorie d'apprentissage, du guide.
+
+#### `{{PreviousMenu(chemin-précédent, chemin-accueil)}}`
+
+- `chemin-précédent` : Une chaîne de caractère correspondant à une URL interne vers la page précédente du tutoriel, de la catégorie d'apprentissage, du guide.
+- `chemin-accueil` : Une chaîne de caractère correspondant à une URL interne vers la page d'accueil du tutoriel, de la catégorie d'apprentissage, du guide.
+
+#### `{{PreviousMenuNext(chemin-précédent, chemin-accueil, chemin-suivant)}}`
+
+- `chemin-précédent` : Une chaîne de caractère correspondant à une URL interne vers la page précédente du tutoriel, de la catégorie d'apprentissage, du guide.
+- `chemin-accueil` : Une chaîne de caractère correspondant à une URL interne vers la page d'accueil du tutoriel, de la catégorie d'apprentissage, du guide.
+- `chemin-suivant` : Une chaîne de caractère correspondant à une URL interne vers la page suivante du tutoriel, de la catégorie d'apprentissage, du guide.
+
+#### `{{PreviousNext(chemin-précédent, chemin-suivant)}}`
+
+- `chemin-précédent` : Une chaîne de caractère correspondant à une URL interne vers la page précédente du tutoriel, de la catégorie d'apprentissage, du guide.
+- `chemin-suivant` : Une chaîne de caractère correspondant à une URL interne vers la page suivante du tutoriel, de la catégorie d'apprentissage, du guide.
+
+### Les macros diverses
+
+#### `{{SubpagesWithSummaries}}` <ReadOnlyInline />
+
+- Cet élément ne prend aucun paramètre. Cela retourne la liste des sous-pages de la page parente.
+
+#### Macros de navigation obsolètes
+
+- `QuickLinksWithSubpages` <ReadOnlyInline /> <Badge text="Obsolète" color="#cc2626" />
