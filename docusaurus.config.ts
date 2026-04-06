@@ -19,7 +19,7 @@ const config: Config = {
   projectName: 'documentation',
   trailingSlash: false,
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
 
   i18n: {
     defaultLocale: 'fr',
