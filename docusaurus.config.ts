@@ -31,12 +31,12 @@ const config: Config = {
       '@docusaurus/preset-classic',
       {
         docs: {
-          sidebarPath: './sidebars.ts',
           editUrl:
             'https://github.com/mdn-fr/documentation/tree/main/',
+          sidebarPath: './sidebars.ts',
         },
         blog: {
-          showReadingTime: true,
+          blogSidebarTitle: 'Articles récents',
           feedOptions: {
             type: ['rss', 'atom'],
             xslt: true,
@@ -46,6 +46,8 @@ const config: Config = {
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
+          postsPerPage: 10,
+          showReadingTime: true,
         },
         theme: {
           customCss: './src/css/custom.css',
