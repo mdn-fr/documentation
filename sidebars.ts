@@ -17,8 +17,8 @@ const sidebars: SidebarsConfig = {
         'guides/la-structure-des-fichiers-markdown/index',
         'guides/le-front-matter/index',
         'guides/les-ancres-des-liens-internes/index',
-        'guides/les-blocs-de-codes/index',
         'guides/les-exemples-interactifs/index',
+        'guides/les-blocs-de-codes/index',
         'guides/les-macros-et-leur-fonctionnement/index'
       ],
     },
