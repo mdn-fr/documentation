@@ -9,7 +9,7 @@ const config: Config = {
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
-    v4: true,
+    v4: false,
   },
 
   url: 'https://mdn-fr.github.io/',
@@ -34,6 +34,8 @@ const config: Config = {
           editUrl:
             'https://github.com/mdn-fr/documentation/tree/main/',
           sidebarPath: './sidebars.ts',
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
         },
         blog: {
           blogSidebarTitle: 'Articles récents',
@@ -48,6 +50,8 @@ const config: Config = {
           onUntruncatedBlogPosts: 'warn',
           postsPerPage: 10,
           showReadingTime: true,
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
         },
         theme: {
           customCss: './src/css/custom.css',
