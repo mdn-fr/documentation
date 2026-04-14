@@ -29,6 +29,16 @@
   --docusaurus-highlighted-code-line-bg: rgba(255 255 255 / 5%);
 }
 
+.tabs__item {
+  border-radius: 0;
+  padding: .75rem .5rem;
+}
+
+.theme-admonition {
+  border-radius: 0 .2rem .2rem 0;
+  border-left-width: .15rem;
+}
+
 .theme-code-block {
   box-shadow: 0 0 0 1px rgba(255 255 255 / 15%);
 

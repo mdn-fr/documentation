@@ -13,6 +13,11 @@ mdn:
   permalink: /mdn
   description: Votre modèle pour un internet meilleur. Documenter le CSS, le HTML et le JavaScript, depuis 2005.
 
+roadmap:
+  label: Feuille de route
+  permalink: /roadmap
+  description: Retrouvez toutes nos feuilles de route des chantiers mensuels de l'équipe de traduction.
+
 traduction:
   label: Traduction
   permalink: /traduction
