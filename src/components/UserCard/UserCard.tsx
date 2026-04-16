@@ -11,7 +11,7 @@ interface UserCardProps {
    * Is team leader ?
    * @default false
    */
-  lead: boolean
+  lead?: boolean
   /**
    * Started and active activity since.
    */

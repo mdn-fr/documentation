@@ -85,8 +85,13 @@ const config: Config = {
         {to: '/blog', label: 'Blog', position: 'left'},
         {to: '/équipe', label: 'Équipe', position: 'left'},
         {
+          href: 'https://developer.mozilla.org/fr/',
+          label: 'Aller sur le MDN',
+          position: 'right',
+        },
+        {
           href: 'https://github.com/mdn-fr/documentation',
-          label: 'GitHub',
+          label: 'GitHub de la documentation',
           position: 'right',
         },
       ],
@@ -95,25 +100,37 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Documentation',
+          title: 'Ce site vous propose',
           items: [
             {
-              label: 'Documentation',
-              to: '/docs/home',
+              label: 'La documentation',
+              to: '/docs',
             },
             {
-              label: 'Blog',
+              label: 'Le blog',
               to: '/blog',
+            },
+            {
+              label: 'L\'équipe',
+              to: '/équipe',
             },
           ],
         },
         {
-          title: 'Communauté',
+          title: 'Rejoignez-nous',
           items: [
             {
-              label: 'Discord',
-              href: 'https://discord.com/invite/Ms6FzTrnYT',
+              label: 'Matrix #l10n-fr',
+              href: 'https://chat.mozilla.org/#/room/#l10n-fr:mozilla.org',
             },
+            {
+              label: 'Discord MDN (angl.)',
+              href: 'https://discord.com/invite/Gt4Qf6q67h',
+            },
+            /*{
+              label: 'Discord FR',
+              href: 'https://discord.com/invite/Ms6FzTrnYT',
+            },*/
             {
               label: 'Dépôt des traductions',
               href: 'https://github.com/mdn/translated-content',
@@ -121,14 +138,10 @@ const config: Config = {
           ],
         },
         {
-          title: 'Plus de pages',
+          title: 'Docusaurus',
           items: [
             {
-              label: 'GitHub de la documentation',
-              href: 'https://github.com/mdn-fr/documentation',
-            },
-            {
-              label: 'Docusaurus',
+              label: 'Le site de Docusaurus',
               href: 'https://docusaurus.io/',
             },
             {
