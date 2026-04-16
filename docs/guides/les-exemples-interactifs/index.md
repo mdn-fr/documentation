@@ -117,20 +117,20 @@ L'exemple suivant provient de [l'exemple de l'élément HTML `<b>`](https://deve
 ##### Markdown
 
 ````markdown
-  ## Exemples
+ ## Exemples
 
-  ```html
-  <p>
-    Cet article décrit plusieurs éléments <b class="keyword">texte</b>. Il
-    explique leur usage dans un document <b class="keyword">HTML</b>.
-  </p>
-  Les mots-clés sont affichés avec le style par défaut de l'élément &lt;b&gt;,
-  sûrement en gras.
-  ```
+ ```html
+ <p>
+   Cet article décrit plusieurs éléments <b class="keyword">texte</b>. Il
+   explique leur usage dans un document <b class="keyword">HTML</b>.
+ </p>
+ Les mots-clés sont affichés avec le style par défaut de l'élément &lt;b&gt;,
+ sûrement en gras.
+ ```
 
-  ### Résultat
+ ### Résultat
 
-  {{EmbedLiveSample("Exemple")}}
+ {{EmbedLiveSample("Exemple")}}
 ````
 
 ##### Résultat
@@ -138,6 +138,38 @@ L'exemple suivant provient de [l'exemple de l'élément HTML `<b>`](https://deve
 ![Exemple d'un rendu effectué à partir du code fourni à une macro pour l'exemple de l'élément HTML b](exemple-de-resultat-dexemple-element-html-b.png)
 
 Il existe des particularités pour les blocs de code que nous présentons dans le prochain article.
+
+### Les blocs de résultat d'exemple avec un identifiant
+
+Il est aussi possible de [donner à un bloc de code plusieurs identifiants](/docs/guides/les-blocs-de-codes#le-bloc-de-code-identifiant-un-exemple) pour permettre d'utiliser du code dans plusieurs exemples.
+
+Par exemple, vous avez 3 résultats, chacun présente une animation, mais le CSS des 3 résultats est le même pour créer les formes et les couleurs. Vous allez donc pouvoir créer _un_ bloc de code avec _3 identifiants_ et les 3 blocs de codes des animations avec chacun un idendifiants, ce qui va permettre d'utiliser le même CSS à trois endroits.
+
+Cette méthode remplace l'utilisation du titre de la section ([vu précédemment](#les-blocs-de-résultat-dexemple)), par l'identifiant.
+
+````markdown {3,15}
+ ## Exemples
+
+ ```css hidden live-sample___repeat-left live-sample___ease-top live-sample___stop-on-hover
+ div {
+   background-color: red;
+   width: 100px;
+   height: 100px;
+ }
+ ```
+
+ …
+
+ ### Résultat
+
+ {{EmbedLiveSample("repeat-left")}} <- On a utilisé un des 3 identifiants à la place d'un titre
+````
+
+C'est un [bloc de code avec un identifiant](/docs/guides/les-blocs-de-codes#le-bloc-de-code-identifiant-un-exemple), ce qui permet de l'appeler grâce à un ou plusieurs identifiants dans un ou plusieurs exemples. Mais aussi d'éviter la complexité de devoir récupérer la version « _slug_ » d'un titre ou de coller un titre [dans la macro affichant le résultat d'un exemple](/docs/guides/les-macros-et-leur-fonctionnement#embedlivesampletitre-largeur-hauteur-non-utilisé-1-non-utilisé-2-non-utilisé-3-fonctionnalités-autorisées-bas-à-sable).
+
+:::warning
+Il n'est pas possible d'utiliser plusieurs identifiants dans la macro, il est donc nécessaire de chaîner les blocs de code en leur donnant plusieurs identifiants, s'ils doivent être présents dans plusieurs résultats d'exemple.
+:::
 
 ## Traduire le code des exemples
 

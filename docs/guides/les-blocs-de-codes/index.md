@@ -26,6 +26,18 @@ Nous l'avons présenté dans la liste des éléments Markdown, le bloc de code d
   ```
 ````
 
+### Le bloc de code identifiant un exemple
+
+Ce bloc de code permet l'usage du/des identifiant·s qui lui sont donnés dans un ou plusieurs résultats d'exemples. Cela permet de chaîner les différents blocs de code à des résultats exemples et de pouvoir également réutiliser un même bloc de code dans plusieurs exemples.
+
+````markdown
+  ```html live-sample___basic-usage live-sample___advanced-usage
+  <div>Contenu de votre élément</div>
+  ```
+````
+
+Cela se lie fortement avec la macro [`{{EmbedLiveSample}}`](/docs/guides/les-macros-et-leur-fonctionnement#embedlivesampletitre-largeur-hauteur-non-utilisé-1-non-utilisé-2-non-utilisé-3-fonctionnalités-autorisées-bas-à-sable) qui en fait grand usage et la macro [`{{LiveSampleLink}}`](/docs/guides/les-macros-et-leur-fonctionnement#livesamplelinktitre) qui permet de faire le même rendu dans une nouvelle page.
+
 ### Le bloc de code présentant un mauvais code
 
 Pour rendre un bloc de code comme une alerte signalant qu'on présente un code à ne pas utiliser, nous ajoutons un mot clé `example-bad` après le type de langage.
