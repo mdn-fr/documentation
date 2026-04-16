@@ -49,8 +49,8 @@ Il faut donc pouvoir discerner les différents liens pour savoir quand transform
 
 #### Les liens erronés
 
-Afin de voir facilement les liens qui n'exsitent pas, le MDN ajoute un style différent pour les pages qui ne dirivent vers rien. Les liens sont affichés en rouge et sont signalés comme des erreurs. Les macros se trasnformant en liens, l'application de ce style s'y effectue également.
+Afin de voir facilement les liens qui n'exsitent pas, le MDN ajoute un style différent pour les pages qui ne dirivent vers rien. Les liens sont affichés en rouge et sont signalés comme des erreurs. Pour les macros se transformant en liens, ce style est également appliqué pour signaler l'erreur.
 
 ## Résumé
 
-Nous avons VA vu dans ce guide les différents types de liens et leur écriture, nous allons pouvoir aborder ensuite ce qui rend nos exemples interactifs et comment cela fonctionne.
+Nous avons vu dans ce guide les différents types de liens et leur écriture, les liens externes vers des ressources complémentaires et les liens internes que nous pouvons créer entre les pages avec le balisage Markdown, ou les macros. Nous allons pouvoir aborder ensuite ce qui rend nos exemples interactifs et comment cela fonctionne, car comme les liens faisant référence à une ancre d'un titre, les exemples interactifs ont une particularité liée aux titres.
