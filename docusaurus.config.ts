@@ -83,7 +83,7 @@ const config: Config = {
           label: 'Documentation',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
-        {to: '/team', label: 'Équipe', position: 'left'},
+        {to: '/équipe', label: 'Équipe', position: 'left'},
         {
           href: 'https://github.com/mdn-fr/documentation',
           label: 'GitHub',
