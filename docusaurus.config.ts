@@ -163,6 +163,11 @@ const config: Config = {
           line: 'good-example',
           block: {start: 'good-example-start', end: 'good-example-end'},
         },
+        {
+          className: 'code-block code-block-warn-example',
+          line: 'warn-example',
+          block: {start: 'warn-example-start', end: 'warn-example-end'},
+        },
       ],
     },
   } satisfies Preset.ThemeConfig,
