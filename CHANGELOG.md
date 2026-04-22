@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/mdn-fr/documentation/compare/v1.0.0...v1.0.1) (2026-04-22)
+
+
+### Miscellaneous
+
+* adding history-content snapshot of april 2026 ([ef41539](https://github.com/mdn-fr/documentation/commit/ef41539e0972d982bda876142b3491133b2d36fa))
+
 ## 1.0.0 (2026-04-16)
 
 
