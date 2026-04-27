@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.0.1](https://github.com/mdn-fr/documentation/compare/v1.0.0...v1.0.1) (2026-04-27)
+
+
+### Miscellaneous
+
+* adding history-content snapshot of april 2026 ([ef41539](https://github.com/mdn-fr/documentation/commit/ef41539e0972d982bda876142b3491133b2d36fa))
+* **deps:** bump github/codeql-action from 4.35.1 to 4.35.2 ([#24](https://github.com/mdn-fr/documentation/issues/24)) ([4c38712](https://github.com/mdn-fr/documentation/commit/4c38712ded0d3ab101f5f032b7bf13a5a91c8f8c))
+* **deps:** bump googleapis/release-please-action from 4.4.0 to 5.0.0 ([#27](https://github.com/mdn-fr/documentation/issues/27)) ([69f1009](https://github.com/mdn-fr/documentation/commit/69f100924de38f921332c1b2a6d3014745d6dafa))
+
 ## 1.0.0 (2026-04-16)
 
 
