@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.0.1](https://github.com/mdn-fr/documentation/compare/v1.0.0...v1.0.1) (2026-05-12)
+
+
+### Miscellaneous
+
+* adding history-content snapshot of april 2026 ([ef41539](https://github.com/mdn-fr/documentation/commit/ef41539e0972d982bda876142b3491133b2d36fa))
+* **blog:** mai 2026 roadmap blog page ([d1e19cd](https://github.com/mdn-fr/documentation/commit/d1e19cd8e72fd34e1ee7b18a3b85caae21645b62))
+* **deps:** bump actions/setup-node from 6.3.0 to 6.4.0 ([#28](https://github.com/mdn-fr/documentation/issues/28)) ([ceccef9](https://github.com/mdn-fr/documentation/commit/ceccef9e125a202f090c24159eb843ae64f3a09a))
+* **deps:** bump docusaurus/* from 3.10.0 to 3.10.1 ([f72f78e](https://github.com/mdn-fr/documentation/commit/f72f78e89811a6ed8a0546679a4535c4af4cdca4))
+* **deps:** bump github/codeql-action from 4.35.1 to 4.35.2 ([#24](https://github.com/mdn-fr/documentation/issues/24)) ([4c38712](https://github.com/mdn-fr/documentation/commit/4c38712ded0d3ab101f5f032b7bf13a5a91c8f8c))
+* **deps:** bump github/codeql-action from 4.35.2 to 4.35.3 ([#30](https://github.com/mdn-fr/documentation/issues/30)) ([fcb5dc0](https://github.com/mdn-fr/documentation/commit/fcb5dc006d7c30dcc64bcafd75950828f3b33dfc))
+* **deps:** bump github/codeql-action from 4.35.3 to 4.35.4 ([#38](https://github.com/mdn-fr/documentation/issues/38)) ([cc38dd3](https://github.com/mdn-fr/documentation/commit/cc38dd3d8b599492e8fa3f51df97d5f8f965f22a))
+* **deps:** bump googleapis/release-please-action from 4.4.0 to 5.0.0 ([#27](https://github.com/mdn-fr/documentation/issues/27)) ([69f1009](https://github.com/mdn-fr/documentation/commit/69f100924de38f921332c1b2a6d3014745d6dafa))
+* **deps:** bump lucide-react from 1.8.0 to 1.14.0 ([#37](https://github.com/mdn-fr/documentation/issues/37)) ([81e71bf](https://github.com/mdn-fr/documentation/commit/81e71bf43ce4409731323948785fe3d9e03a8798))
+* **deps:** bump react from 19.2.5 to 19.2.6 ([c72e046](https://github.com/mdn-fr/documentation/commit/c72e0466234dbcfbd1abd391f0474d7785efffbf))
+* **tags:** cleanup tags on docs ([c32eb44](https://github.com/mdn-fr/documentation/commit/c32eb44a5caca3886eecdaa89602153c9c750753))
+
 ## 1.0.0 (2026-04-16)
 
 
