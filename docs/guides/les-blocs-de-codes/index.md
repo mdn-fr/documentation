@@ -1,7 +1,7 @@
 ---
 title: Les blocs de codes
 slug: /guides/les-blocs-de-codes
-tags: [guides, markdown, code]
+tags: [guides, markdown]
 ---
 
 Le MDN est une documentation des technologies utilisées sur le web, par les développeur·euse·s de site et applications. Pour présenter les différents aspects d'une technologie, nous utilisons des blocs de code qui prennent diverses formes selon le besoin.

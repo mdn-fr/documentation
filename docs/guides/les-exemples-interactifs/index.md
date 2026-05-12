@@ -1,7 +1,7 @@
 ---
 title: Les exemples interactifs
 slug: /guides/les-exemples-interactifs
-tags: [guides, markdown, code]
+tags: [guides, markdown]
 ---
 
 Pour permettre aux lecteur·ice·s d'expérimenter ce que la documentation présente, nous créons des exemples qui sont rendus interactifs grâce aux macros, mais surtout aux blocs de codes.

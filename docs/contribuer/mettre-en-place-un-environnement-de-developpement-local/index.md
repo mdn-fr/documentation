@@ -1,7 +1,8 @@
 ---
 title: Mettre en place un environnement de développement local
 slug: /contribuer/mettre-en-place-un-environnement-de-developpement-local
-tags: [guides, npm, localhost]
+keywords: [guides, npm, localhost]
+tags: [guides]
 ---
 
 Pour pouvoir contribuer au MDN pleinement, en utilisant un environnement de développement local adapté à votre besoin, nous allons vous présenter les différents éléménts et étapes nécessaires pour préparer votre future contribution.

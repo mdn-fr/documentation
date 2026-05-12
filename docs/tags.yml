@@ -1,3 +1,8 @@
+github:
+  label: GitHub
+  permalink: /github
+  description: GitHub est une plateforme de développement collaboratif qui permet de gérer des projets et de partager du code. Découvrez comment nous utilisons GitHub pour contribuer à la documentation du MDN en français.
+
 guides:
   label: Guides
   permalink: /guides
