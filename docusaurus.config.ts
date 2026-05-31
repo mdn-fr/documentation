@@ -12,8 +12,8 @@ const config: Config = {
     v4: false,
   },
 
-  url: 'https://mdn-fr.github.io/',
-  baseUrl: '/documentation/',
+  url: 'https://docs.mdnfr.org',
+  baseUrl: '/',
 
   organizationName: 'mdn-fr',
   projectName: 'documentation',
