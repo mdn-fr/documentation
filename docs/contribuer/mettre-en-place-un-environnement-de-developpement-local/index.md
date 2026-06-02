@@ -15,7 +15,7 @@ Pour pouvoir mettre en place un environnement de travail qui vous permettra de c
 | ----------------------------------------------------------------- | ---------- |
 | Un éditeur ([Visual Studio Code](https://code.visualstudio.com/)) | Facile     |
 | [Git](https://git-scm.com/)                                       | Moyenne    |
-| [Node.js](https://nodejs.org/) `24.x` et npm `11.9`               | Moyenne    |
+| [Node.js](https://nodejs.org/) `24.14.0` et npm `11.9`            | Moyenne    |
 
 Installer un éditeur ou utiliser votre éditeur favori pour préparer votre environnement de travail. Nous avons mis VSCode puisque nous proposons également un plugin dédié aux macros et leur syntaxe.
 
