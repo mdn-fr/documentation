@@ -83,6 +83,11 @@ const config: Config = {
           label: 'Documentation',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
+        {
+          href: 'https://forum.mdnfr.org/',
+          label: 'Forum', position:
+          'left'
+        },
         {to: '/équipe', label: 'Équipe', position: 'left'},
         {
           href: 'https://developer.mozilla.org/fr/',
