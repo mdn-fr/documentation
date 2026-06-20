@@ -196,6 +196,7 @@ const config: Config = {
       "posthog-docusaurus",
       {
         apiKey: "phc_rA8oUST2KQnixsSBGEdi6CLA6Gz7cWGWzDwmupTGtsxZ",
+        api_host: "https://d.mdnfr.org",
         appUrl: "https://eu.i.posthog.com",
         enableInDevelopment: false,
       },
