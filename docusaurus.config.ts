@@ -32,7 +32,7 @@ const config: Config = {
       {
         docs: {
           editUrl:
-            'https://github.com/mdn-fr/documentation/tree/main/',
+            'https://github.com/mdn-fr/documentation/blob/main/',
           sidebarPath: './sidebars.ts',
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
@@ -44,7 +44,7 @@ const config: Config = {
             xslt: true,
           },
           editUrl:
-            'https://github.com/mdn-fr/documentation/tree/main/',
+            'https://github.com/mdn-fr/documentation/blob/main/',
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
@@ -127,6 +127,10 @@ const config: Config = {
             {
               label: 'Matrix #l10n-fr',
               href: 'https://chat.mozilla.org/#/room/#l10n-fr:mozilla.org',
+            },
+            {
+              label: 'Forum MDN FR',
+              href: 'https://forum.mdnfr.org/',
             },
             {
               label: 'Discord MDN (angl.)',
