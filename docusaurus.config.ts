@@ -84,7 +84,7 @@ const config: Config = {
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://forum.mdnfr.org/',
+          href: 'https://community.mdnfr.org/',
           label: 'Forum', position:
           'left'
         },
@@ -130,7 +130,7 @@ const config: Config = {
             },
             {
               label: 'Forum MDN FR',
-              href: 'https://forum.mdnfr.org/',
+              href: 'https://community.mdnfr.org/',
             },
             {
               label: 'Discord MDN (angl.)',
