@@ -1,5 +1,43 @@
 # Changelog
 
+## [1.1.0](https://github.com/mdn-fr/documentation/compare/v1.0.1...v1.1.0) (2026-07-13)
+
+
+### Features
+
+* **component:** adding stat table for stat page ([2718909](https://github.com/mdn-fr/documentation/commit/27189095810316cdcd5a7ec8288ff9a6355b4e0d))
+
+
+### Miscellaneous
+
+* **config:** change base uri with new dns ([1c4e64e](https://github.com/mdn-fr/documentation/commit/1c4e64ecde07869b8b37302d8db93523dfe2563c))
+* **deps-dev:** bump @docusaurus/module-type-aliases ([8d4ce05](https://github.com/mdn-fr/documentation/commit/8d4ce0574cd9a0f2ca92e7493038a05d12a4de4b))
+* **deps-dev:** bump @docusaurus/module-type-aliases from 3.10.1 to 3.10.2 ([#61](https://github.com/mdn-fr/documentation/issues/61)) ([8d4ce05](https://github.com/mdn-fr/documentation/commit/8d4ce0574cd9a0f2ca92e7493038a05d12a4de4b))
+* **deps-dev:** bump @docusaurus/tsconfig from 3.10.1 to 3.10.2 ([#57](https://github.com/mdn-fr/documentation/issues/57)) ([83986c7](https://github.com/mdn-fr/documentation/commit/83986c7a07f2d5180e59f115144ac5355f4ed041))
+* **deps-dev:** bump @docusaurus/types from 3.10.1 to 3.10.2 ([#62](https://github.com/mdn-fr/documentation/issues/62)) ([7e1ae56](https://github.com/mdn-fr/documentation/commit/7e1ae56808e47e36c11ee9250b86a19cdbc77be0))
+* **deps:** bump actions/checkout from 6.0.2 to 7.0.0 ([#47](https://github.com/mdn-fr/documentation/issues/47)) ([ecd1de6](https://github.com/mdn-fr/documentation/commit/ecd1de6e96d823f661e46f92d998f09931ca1d68))
+* **deps:** bump github/codeql-action from 4.36.0 to 4.36.2 ([#46](https://github.com/mdn-fr/documentation/issues/46)) ([f9703b2](https://github.com/mdn-fr/documentation/commit/f9703b26f6636ce5301544864141f5a6193dc54e))
+* **deps:** bump lucide-react from 1.17.0 to 1.18.0 ([#48](https://github.com/mdn-fr/documentation/issues/48)) ([f8b4aaf](https://github.com/mdn-fr/documentation/commit/f8b4aafa788a8ad7def68b3a6b01e6f6da290478))
+* **deps:** bump lucide-react from 1.18.0 to 1.21.0 ([#49](https://github.com/mdn-fr/documentation/issues/49)) ([edd6d20](https://github.com/mdn-fr/documentation/commit/edd6d20e224c1d6ec3878263f8d68e40eba95272))
+* **deps:** bump react from 19.2.6 to 19.2.7 ([c7df7e0](https://github.com/mdn-fr/documentation/commit/c7df7e0347d7830d74cac20222d47ffc1e517056))
+* **deps:** update docusaurus main groups ([89d96e3](https://github.com/mdn-fr/documentation/commit/89d96e3aa7438622bae540fc6a78ab1d5d3c1b17))
+* **menu:** adding forum link ([1d24016](https://github.com/mdn-fr/documentation/commit/1d2401671babace075c2f3e09af5bccd008f2b17))
+* **nav:** update forum href ([f47677a](https://github.com/mdn-fr/documentation/commit/f47677ae16573434d20a6362a98414c75bb95f9b))
+* **posthog:** setup reverse proxy ([4d95fb1](https://github.com/mdn-fr/documentation/commit/4d95fb18820eb3048958d4024d52ef32eade78cb))
+* set current mdn node.js version ([33cd6be](https://github.com/mdn-fr/documentation/commit/33cd6be00657153292dff433819018a65dc06ba6))
+* **stats:** first stats update about french translations ([34ce29e](https://github.com/mdn-fr/documentation/commit/34ce29ea69f0d2b9c562839c423bba8048c92ed4))
+
+
+### Bug Fixes
+
+* **config:** edit page link redirect to wrong path ([979b800](https://github.com/mdn-fr/documentation/commit/979b800fafbbb0da1cf5d6a49a5362bf46da8bc1))
+* **deps:** fixed non breaking security issues ([a9e47cd](https://github.com/mdn-fr/documentation/commit/a9e47cdabf1c6f8f391523d9e59f1bf2b4cd7bec))
+
+
+### CI/CD changes
+
+* **deps:** update codeql from 4.36.2 to 4.37.0 ([b8bef26](https://github.com/mdn-fr/documentation/commit/b8bef26c7c0bd36cf956e02dec07c6bfe2ee4c6f))
+
 ## [1.0.1](https://github.com/mdn-fr/documentation/compare/v1.0.0...v1.0.1) (2026-05-31)
 
 
