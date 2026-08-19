@@ -1,0 +1,6 @@
+post-merge:
+  only:
+    - ref: main
+  commands:
+    install:
+      run: npm install
