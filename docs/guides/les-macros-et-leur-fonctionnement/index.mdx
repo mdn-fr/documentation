@@ -196,7 +196,11 @@ Affiche une bannière signalant que la fonctionnalité est disponible dans les t
 
 #### `{{Deprecated_Header}}`
 
-<Badge text="Bannière" color="#2299ff" /> <ReadOnlyInline />
+<Badge text="Bannière" color="#2299ff" /> <ReadOnlyInline /> <Badge text="Obsolète" color="#cc2626" />
+
+:::danger
+La macro est à éviter, le MDN inclut maintenant l'état d'obsolescence et de suppression directement dans les bannières de Baseline. Si une bannière d'obsolescence doit être écrite, il faut le faire avec le GFM.
+:::
 
 Cet élément ne prend aucun paramètre.
 
