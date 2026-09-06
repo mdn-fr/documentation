@@ -1,5 +1,27 @@
 # Changelog
 
+## [1.1.1](https://github.com/mdn-fr/documentation/compare/v1.1.0...v1.1.1) (2026-09-06)
+
+
+### Miscellaneous
+
+* **deps:** bump actions/checkout from 7.0.0 to 7.0.1 ([#69](https://github.com/mdn-fr/documentation/issues/69)) ([8cd1e2b](https://github.com/mdn-fr/documentation/commit/8cd1e2b256ea684ee5338d846f8c8f391b66afdc))
+* **deps:** bump actions/setup-node from 6.4.0 to 7.0.0 ([#65](https://github.com/mdn-fr/documentation/issues/65)) ([15db5a0](https://github.com/mdn-fr/documentation/commit/15db5a0b8e0a611154dc375a34be6110c796c57c))
+* **deps:** bump lucide-react from 1.24.0 to 1.31.0 ([#79](https://github.com/mdn-fr/documentation/issues/79)) ([34084aa](https://github.com/mdn-fr/documentation/commit/34084aafca4b0421536445fe781e40a065be1fd9))
+* **deps:** bump lucide-react from 1.31.0 to 1.34.0 ([#86](https://github.com/mdn-fr/documentation/issues/86)) ([23e0396](https://github.com/mdn-fr/documentation/commit/23e03967cba3fe0bf31a42239f780ba8ea915023))
+* **deps:** bump the codeql-action group with 2 updates ([#84](https://github.com/mdn-fr/documentation/issues/84)) ([1552f7b](https://github.com/mdn-fr/documentation/commit/1552f7b9504391f3c3142be99fbb9abfbcbd8ba0))
+* **deps:** bump the codeql-action group with 2 updates ([#87](https://github.com/mdn-fr/documentation/issues/87)) ([7455b06](https://github.com/mdn-fr/documentation/commit/7455b06e0d82c6f537907e65fe46201220bd48fa))
+* **deps:** bump the react group across 1 directory with 2 updates ([#83](https://github.com/mdn-fr/documentation/issues/83)) ([5b2ea9c](https://github.com/mdn-fr/documentation/commit/5b2ea9c7121f49d08e67320baaca347153f2188c))
+* **deps:** bump TS to 6.0.3, and others ([24752ae](https://github.com/mdn-fr/documentation/commit/24752ae4e09b4143f0b9dd5af2dfe20fb3907016))
+* **deps:** group dependencies updates ([d1268ea](https://github.com/mdn-fr/documentation/commit/d1268ea3b7575518d8ff0dbe4a3236d00f6a910b))
+* **deps:** setup lefthook to auto install npm on pull ([374d0d3](https://github.com/mdn-fr/documentation/commit/374d0d3cf64539b8161d21374d6851631c3efd51))
+* **deps:** update deps ([e0db103](https://github.com/mdn-fr/documentation/commit/e0db103014799df25c38cb0981ba583b4242a78b))
+* **macros:** mark Deprecated_Header as "To be removed" ([c1d7d8c](https://github.com/mdn-fr/documentation/commit/c1d7d8c96686889bc8654016ea5a4108ce066101))
+* **macros:** remove `Depreacated_Header` following deprecation PR ([ea721dc](https://github.com/mdn-fr/documentation/commit/ea721dc20d2c54a59b3561b8e9bb05b0e6e1be8c))
+* **macros:** remove `Deprecated_Header` following deprecation PR ([#90](https://github.com/mdn-fr/documentation/issues/90)) ([ea721dc](https://github.com/mdn-fr/documentation/commit/ea721dc20d2c54a59b3561b8e9bb05b0e6e1be8c))
+* **macros:** remove `QuickLinksWithSubpages` macro ([#91](https://github.com/mdn-fr/documentation/issues/91)) ([4e7a4d8](https://github.com/mdn-fr/documentation/commit/4e7a4d83c66e6d8153270f65467ceb1547ed6a1a))
+* **macros:** remove deprecated sidebar macros ([#89](https://github.com/mdn-fr/documentation/issues/89)) ([8ba8c73](https://github.com/mdn-fr/documentation/commit/8ba8c7384aed7a5739461e8461a07e045a4406a9))
+
 ## [1.1.0](https://github.com/mdn-fr/documentation/compare/v1.0.1...v1.1.0) (2026-07-13)
 
 
