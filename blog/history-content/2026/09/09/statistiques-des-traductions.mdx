@@ -1,0 +1,223 @@
+---
+title: Statistiques | Relevés des traductions - Septembre 2026
+slug: /outils/septembre-2026/releves-des-traductions
+authors: [mdn-fr]
+tags: [outils, statistiques]
+---
+
+Il y a un an exactement, a été repris la complète traduction et re-synchronisation des pages de la documentation. Durant ce processus ont été traités plus de 4680 requêtes de tirage pour maintenir à l'heure où ces lignes sont écrites, près de 52,08&nbsp;% de la documentation qui est traduite et disponible en Français&nbsp;!
+
+{/* truncate */}
+
+Afin de faire un point régulier sur l'avancée de ce chantier qui est en constante évolution avec les pages qui sont créées et supprimées régulièrement sur la partie d'origine (en-US). Nous avons effectué le relevé suivant des données qui sont recueillies toutes les 6 heures chaque jour.
+
+import { SquareArrowOutUpRight } from 'lucide-react'
+import { StatTable, StatHeader, StatSubHeader, StatRow, StatLegend } from '/src/components/StatTable/StatTable'
+
+Ce qui monte le MDN à&nbsp;:
+
+<StatTable>
+  <StatHeader />
+  <StatRow translated={5027} outdated={2587} untranslated={7007}>Toutes les pages</StatRow>
+</StatTable>
+
+Donc au moment des relevés pour 14 621 pages, 7 614 sont disponibles en français, mais pas complètement actualisées pour certaines. Ce qui fait 52,08&nbsp;%.
+
+_Note&nbsp;: Les relevés ont été effectués le dimanche 6 septembre 2026 à 2h45 et utilisent les statistiques calculées automatiquement par le système à 1h15._
+
+## Mise en avant : Dans cet article
+
+### Légende
+
+<StatTable>
+  <StatLegend showHighlight showPlanned showHot />
+</StatTable>
+
+### Aide requise
+
+Les sections suivantes sont ouvertes à la contribution publique, vous pouvez y contribuer dès maintenant pour nous aider sur ces chantiers&nbsp;:
+
+<StatTable>
+  <StatHeader />
+  <StatRow translated={1458} outdated={951} untranslated={5683} isHot>API</StatRow>
+</StatTable>
+<StatTable>
+  <StatSubHeader name="SVG" />
+  <StatRow translated={1} outdated={30} untranslated={173} isHelpWanted>Attributs <a href="https://github.com/mdn/translated-content/issues/34957" rel="external" data-ticket>Ticket 34957 <SquareArrowOutUpRight size={16} /></a></StatRow>
+  <StatRow translated={8} outdated={53} untranslated={3} isHelpWanted>Éléments <a href="https://github.com/mdn/translated-content/issues/34956" rel="external" data-ticket>Ticket 34956 <SquareArrowOutUpRight size={16} /></a></StatRow>
+</StatTable>
+
+### Chantiers pris en charge par l'équipe
+
+Les sections suivantes font partie des boucles de mises à jour, disponibles sur [notre planning mensuel](/blog/mai-2026/feuille-de-route-du-mois-de-mai)&nbsp;:
+
+<StatTable>
+  <StatSubHeader name="Firefox" />
+  <StatRow translated={91} outdated={0} untranslated={101} isPlanned>Versions</StatRow>
+</StatTable>
+<StatTable>
+  <StatSubHeader name="CSS" />
+  <StatRow translated={68} outdated={97} untranslated={47} isPlanned>Guides</StatRow>
+</StatTable>
+<StatTable>
+  <StatSubHeader name="HTTP" />
+  <StatRow translated={18} outdated={12} untranslated={19} isPlanned>Guides</StatRow>
+  <StatRow translated={189} outdated={8} untranslated={54} isPlanned>En-têtes</StatRow>
+</StatTable>
+<StatTable>
+  <StatSubHeader name="JavaScript" />
+  <StatRow translated={739} outdated={240} untranslated={35} isPlanned>Global Objects</StatRow>
+</StatTable>
+
+## Important à savoir
+
+Les sections qui sont marquées comme complétées et à jour, sont également régulièrement synchronisées&nbsp;; et font donc partie d'une boucle de mise à jour régulière. Par conséquent, elles ne nécessitent pas de modifications ou mises à jour, seules de nouvelles pages peuvent nécessiter une traduction.
+
+## Relevé des traductions
+
+<StatTable>
+  <StatSubHeader name="Games" />
+  {/*  */}
+  <StatRow translated={21} outdated={10} untranslated={35}>📂 **Jeux**</StatRow>
+  <StatRow translated={2} outdated={6} untranslated={19}>├ Techniques</StatRow>
+  <StatRow translated={10} outdated={4} untranslated={16}>└ Tutoriels</StatRow>
+</StatTable>
+<StatTable>
+  <StatSubHeader name="Glossary" />
+  {/*  */}
+  <StatRow translated={631} outdated={0} untranslated={0}>📂 **Glossaire**</StatRow>
+</StatTable>
+<StatTable>
+  <StatSubHeader name="Learn" />
+  {/*  */}
+  <StatRow translated={97} outdated={141} untranslated={95}>📂 **Apprendre**</StatRow>
+  <StatRow translated={22} outdated={0} untranslated={0}>├ Pour commencer</StatRow>
+  <StatRow translated={66} outdated={55} untranslated={28}>├ Modules fondamentaux</StatRow>
+  <StatRow translated={3} outdated={66} untranslated={51}>├ Modules étendus</StatRow>
+  <StatRow translated={4} outdated={20} untranslated={14}>└ Comment faire</StatRow>
+</StatTable>
+<StatTable>
+  <StatSubHeader name="MDN" />
+  {/*  */}
+  <StatRow translated={78} outdated={0} untranslated={0}>📂 **MDN**</StatRow>
+  <StatRow translated={14} outdated={0} untranslated={0}>├ Communauté</StatRow>
+  <StatRow translated={60} outdated={0} untranslated={0}>└ Règles d'écriture</StatRow>
+</StatTable>
+<StatTable>
+  <StatSubHeader name="Mozilla" />
+  {/*  */}
+  <StatRow translated={101} outdated={611} untranslated={257}>📂 **Mozilla**</StatRow>
+  <StatRow translated={100} outdated={611} untranslated={257}>├ Firefox</StatRow>
+  <StatRow translated={8} outdated={610} untranslated={156}>├ └  Extensions pour Firefox</StatRow>
+  <StatRow translated={91} outdated={0} untranslated={101} isPlanned>└ └ Versions</StatRow>
+  <StatLegend showPlanned />
+</StatTable>
+<StatTable>
+  <StatSubHeader name="Web" />
+  {/*  */}
+  <StatRow translated={169} outdated={0} untranslated={0}>📂 **Accessibilité**</StatRow>
+  <StatRow translated={24} outdated={0} untranslated={0}>├ Guides</StatRow>
+  <StatRow translated={149} outdated={0} untranslated={0}>├ ARIA</StatRow>
+  <StatRow translated={54} outdated={0} untranslated={0}>├ Attributs</StatRow>
+  <StatRow translated={88} outdated={0} untranslated={0}>└ Rôles</StatRow>
+  {/*  */}
+  <StatRow translated={1458} outdated={951} untranslated={5683} isHot>📂 **API**</StatRow>
+  {/*  */}
+  <StatRow translated={1112} outdated={97} untranslated={47}>📂 **CSS**</StatRow>
+  <StatRow translated={68} outdated={97} untranslated={47} isPlanned>├ Guides</StatRow>
+  <StatRow translated={14} outdated={0} untranslated={0}>├ Comment faire</StatRow>
+  <StatRow translated={1} outdated={0} untranslated={0}>├ Tutoriels</StatRow>
+  <StatRow translated={100} outdated={0} untranslated={0}>├ Règles @</StatRow>
+  <StatRow translated={570} outdated={0} untranslated={0}>├ Propriétés</StatRow>
+  <StatRow translated={167} outdated={0} untranslated={0}>├ Sélecteurs</StatRow>
+  <StatRow translated={188} outdated={0} untranslated={0}>└ Valeurs, Fonctions, Types</StatRow>
+  {/*  */}
+  <StatRow translated={256} outdated={0} untranslated={0}>📂 **HTML**</StatRow>
+  <StatRow translated={10} outdated={0} untranslated={0}>├ Guides</StatRow>
+  <StatRow translated={7} outdated={0} untranslated={0}>├ Comment faire</StatRow>
+  <StatRow translated={74} outdated={0} untranslated={0}>├ Attributs</StatRow>
+  <StatRow translated={37} outdated={0} untranslated={0}>├ Attributs universels</StatRow>
+  <StatRow translated={163} outdated={0} untranslated={0}>└ Éléments</StatRow>
+  {/*  */}
+  <StatRow translated={282} outdated={20} untranslated={73} isPlanned>📂 **HTTP**</StatRow>
+  <StatRow translated={18} outdated={12} untranslated={19} isPlanned>├ Guides</StatRow>
+  <StatRow translated={189} outdated={8} untranslated={54} isPlanned>├ En-têtes</StatRow>
+  <StatRow translated={10} outdated={0} untranslated={0}>├ Méthodes</StatRow>
+  <StatRow translated={62} outdated={0} untranslated={0}>└ Statuts</StatRow>
+  {/*  */}
+  <StatRow translated={759} outdated={498} untranslated={127}>📂 **JavaScript**</StatRow>
+  <StatRow translated={2} outdated={28} untranslated={3}>├ Guides</StatRow>
+  <StatRow translated={0} outdated={6} untranslated={1}>├ Classes</StatRow>
+  <StatRow translated={0} outdated={74} untranslated={58}>├ Erreurs</StatRow>
+  <StatRow translated={0} outdated={11} untranslated={0}>├ Fonctions</StatRow>
+  <StatRow translated={739} outdated={240} untranslated={35} isPlanned>├ Objects natifs</StatRow>
+  <StatRow translated={7} outdated={69} untranslated={0}>├ Opérateurs</StatRow>
+  <StatRow translated={0} outdated={1} untranslated={19}>├ Expressions rationnelles</StatRow>
+  <StatRow translated={1} outdated={29} untranslated={3}>└ Instructions</StatRow>
+  {/*  */}
+  <StatRow translated={1} outdated={18} untranslated={40}>📂 **MathML**</StatRow>
+  <StatRow translated={0} outdated={4} untranslated={1}>├ Guides</StatRow>
+  <StatRow translated={0} outdated={0} untranslated={8}>├ Tutoriels</StatRow>
+  <StatRow translated={0} outdated={0} untranslated={9}>├ Attributs universels</StatRow>
+  <StatRow translated={0} outdated={12} untranslated={21}>└ Éléments</StatRow>
+  {/*  */}
+  <StatRow translated={1} outdated={7} untranslated={18}>📂 **Médias**</StatRow>
+  <StatRow translated={0} outdated={7} untranslated={18}>└ Guides</StatRow>
+  {/*  */}
+  <StatRow translated={1} outdated={4} untranslated={11}>📂 **Performances**</StatRow>
+  <StatRow translated={0} outdated={4} untranslated={11}>└ Guides</StatRow>
+  {/*  */}
+  <StatRow translated={1} outdated={2} untranslated={19}>📂 **Vie privée**</StatRow>
+  <StatRow translated={0} outdated={2} untranslated={14}>└ Guides</StatRow>
+  {/*  */}
+  <StatRow translated={1} outdated={16} untranslated={42}>📂 **Applications Web Progressives**</StatRow>
+  <StatRow translated={0} outdated={1} untranslated={6}>├ Guides</StatRow>
+  <StatRow translated={0} outdated={0} untranslated={10}>├ Comment faire</StatRow>
+  <StatRow translated={0} outdated={13} untranslated={0}>├ Tutoriels</StatRow>
+  <StatRow translated={0} outdated={2} untranslated={25}>└ Manifeste</StatRow>
+  {/*  */}
+  <StatRow translated={14} outdated={5} untranslated={27}>📂 **Sécurité**</StatRow>
+  <StatRow translated={10} outdated={2} untranslated={0}>├ Attaques</StatRow>
+  <StatRow translated={0} outdated={0} untranslated={6}>├ Authentification</StatRow>
+  <StatRow translated={3} outdated={3} untranslated={6}>├ Défenses</StatRow>
+  <StatRow translated={0} outdated={0} untranslated={11}>└ Guides pratiques de mise en œuvre</StatRow>
+  {/*  */}
+  <StatRow translated={18} outdated={106} untranslated={176}>📂 **SVG**</StatRow>
+  <StatRow translated={5} outdated={6} untranslated={0}>├ Guides</StatRow>
+  <StatRow translated={2} outdated={17} untranslated={0}>├ Tutoriels</StatRow>
+  <StatRow translated={1} outdated={30} untranslated={173} isHelpWanted>├ Attributs <a href="https://github.com/mdn/translated-content/issues/34957" rel="external" data-ticket>Ticket 34957 <SquareArrowOutUpRight size={16} /></a></StatRow>
+  <StatRow translated={8} outdated={53} untranslated={3} isHelpWanted>└ Éléments <a href="https://github.com/mdn/translated-content/issues/34956" rel="external" data-ticket>Ticket 34956 <SquareArrowOutUpRight size={16} /></a></StatRow>
+  {/*  */}
+  <StatRow translated={16} outdated={0} untranslated={0}>📂 **URI**</StatRow>
+  {/*  */}
+  <StatRow translated={0} outdated={1} untranslated={101}>📂 **WebDriver**</StatRow>
+  <StatRow translated={0} outdated={0} untranslated={28}>├ Commandes classiques</StatRow>
+  <StatRow translated={0} outdated={0} untranslated={12}>└ Erreurs</StatRow>
+  {/*  */}
+  <StatRow translated={8} outdated={93} untranslated={16}>📂 **XML**</StatRow>
+  <StatRow translated={0} outdated={1} untranslated={3}>├ Guides</StatRow>
+  <StatRow translated={5} outdated={14} untranslated={6}>├ EXSLT</StatRow>
+  <StatRow translated={1} outdated={40} untranslated={4}>├ **XPath**</StatRow>
+  <StatRow translated={0} outdated={2} untranslated={2}>├ ├ Guides</StatRow>
+  <StatRow translated={0} outdated={37} untranslated={1}>├ └ Fonctions</StatRow>
+  <StatRow translated={6} outdated={52} untranslated={9}>├ **XSLT**</StatRow>
+  <StatRow translated={0} outdated={2} untranslated={2}>├ ├ Guides</StatRow>
+  <StatRow translated={0} outdated={36} untranslated={0}>└ └ Éléments</StatRow>
+  <StatLegend showHighlight showPlanned showHot />
+</StatTable>
+<StatTable>
+  <StatSubHeader name="WebAssembly" />
+  <StatRow translated={8} outdated={40} untranslated={238}>📂 **WebAssembly**</StatRow>
+  <StatRow translated={1} outdated={5} untranslated={6}>├ Guides</StatRow>
+  <StatRow translated={0} outdated={0} untranslated={14}>├ Contrôle de flux</StatRow>
+  <StatRow translated={7} outdated={33} untranslated={8}>├ Interface JavaScript</StatRow>
+  <StatRow translated={0} outdated={0} untranslated={8}>├ Mémoire</StatRow>
+  <StatRow translated={0} outdated={0} untranslated={60}>├ Instructions numériques</StatRow>
+  <StatRow translated={0} outdated={0} untranslated={8}>├ Tableaux</StatRow>
+  <StatRow translated={0} outdated={0} untranslated={7}>└ Variables</StatRow>
+</StatTable>
+
+## Voir aussi
+
+- [Mettre en place un environnement de développement local](/docs/contribuer/mettre-en-place-un-environnement-de-developpement-local)
+- [Tableau de suivi des états de traduction des pages du MDN <sup>(angl.)</sup>](https://tristantheb.github.io/history-content/)
