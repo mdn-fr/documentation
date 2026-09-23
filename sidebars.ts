@@ -19,8 +19,9 @@ const sidebars: SidebarsConfig = {
         'guides/les-ancres-des-liens-internes/index',
         'guides/les-exemples-interactifs/index',
         'guides/les-blocs-de-codes/index',
-        'guides/les-macros-et-leur-fonctionnement/index'
-      ]
+        'guides/les-macros-et-leur-fonctionnement/index',
+        'guides/les-regles-decritures-du-mdn-francophone/index'
+      ],
     },
     {
       type: 'category',

@@ -1,0 +1,126 @@
+---
+title: Un an d'actualisation des pages, où en est-on ?
+slug: /septembre-2026/un-an-dactualisation-des-pages-ou-en-est-on
+authors: [tristantheb]
+tags: [mdn, traduction]
+image: ./one-year-retrospective.webp
+---
+
+Cela fait maintenant une année que nous avons relancé les corrections, synchronisations et traductions des pages du MDN Web Docs. Il est temps de faire un bilan sur cette année écoulée pour voir ce qui a été mis en place, ce qui va changer, et ce qui va rester.
+
+{/* truncate */}
+
+import { SquareArrowOutUpRight } from 'lucide-react'
+import { Badge } from '/src/components/Badge'
+import { StatTable, StatHeader, StatRow } from '/src/components/StatTable/StatTable'
+
+## Rétrospective
+
+Le 9 septembre 2025, les mises à jour des pages ont connues un tournant dans la manière de fonctionner. Jusqu'à lors, les contributions étaient sporadiques et du côté de l'équipe nous faisions des modifications groupées qui prenaient du temps à arriver. Puis a été mis en place le système de **Cycle de thèmes**&nbsp;; qui permet entre autres de programmer une semaine sur un sujet, et ce sujet sera le seul sujet mis à jour par l'équipe avant de changer de sujet.
+
+Ainsi, nous avions la possibilité de changer un nombre de pages conséquent dans une catégorie du site, pendant une courte période de sprint, avant de totalement changer de sujet pour ne pas nous fatiguer sur une seule section.
+
+Durant ces cycles, ont été traitées les catégories suivantes&nbsp;:
+
+- Septembre&nbsp;:
+  - Pages principales ARIA, Rôles ARIA et Comment faire (16-09 au 23-09)
+  - Valeurs et unités CSS, Règles @ (24-09 au 30-09)
+- Octobre&nbsp;:
+  - Fonctions et types de donnée CSS (partie 1) (08-10 au 14-10)
+  - Attributs ARIA (15-10 au 21-10)
+  - Glossaire (partie 1) (22-10 au 28-10)
+- Novembre&nbsp;:
+  - Objets natifs JavaScript (partie 1) (29-10 au 11-11) <Badge text="2 semaines" color="#0c6ccd" />
+  - Fonctions et types de donnée CSS (partie 2) (19-11 au 25-11)
+- Décembre&nbsp;:
+  - Les éléments HTML et les APIs HTMLElement\* (partie 1) (26-11 au 09-12) <Badge text="2 semaines" color="#0c6ccd" />
+  - Objets natifs JavaScript (partie 2) (10-12 au 16-12)
+  - Glossaire (partie 2) (17-12 au 23-12)
+  - [Hors Cycle] Mises à jour de différentes pages de la section HTTP
+- Janvier 2026&nbsp;:
+  - Les éléments HTML et les APIs HTMLElement\* (partie 2) (07-01-2026 au 20-01) <Badge text="2 semaines" color="#0c6ccd" />
+  - Glossaire (partie 3) (21-01 au 27-01)
+- Février&nbsp;:
+  - Propriété CSS (partie 1) (28-01 au 10-02) <Badge text="2 semaines" color="#0c6ccd" />
+  - En-têtes HTTP (partie 1) (11-02 au 17-02)
+  - Objets natifs JavaScript (partie 3) (18-02 au 03-03) <Badge text="2 semaines" color="#0c6ccd" />
+- Mars&nbsp;:
+  - Propriété CSS (partie 2) (18-03 au 24-03)
+  - L'objet natif `Temporal` (25-03 au 31-03)
+- Avril&nbsp;:
+  - Propriété CSS (partie 3) (01-04 au 07-04)
+  - API DOM et HTML (15-04 au 21-04)
+  - L'objet natif `Intl` (22-04 au 28-04)
+- Mai&nbsp;:
+  - En-têtes HTTP (partie 2) (29-04 au 05-05)
+  - Fonctions CSS (06-05 au 12-05)
+  - Guides HTTP (13-05 au 19-05)
+  - Guides CSS (20-05 au 26-05)
+  - Les versions de Firefox de 1.5 à 43 (27-05 au 02-06)
+- Juin&nbsp;:
+
+  Cette période n'a pas été utilisée pour des mises à jour nommées. Mais des changements divers ont été apportés.
+  Ont notamment été nettoyées les sections&nbsp;: MDN, Apprendre / Bien commencer et le module HTML, le module CSS, l'API `Node`, des guides CSS, d'autres API diverses.
+
+- Juillet&nbsp;:
+  - L'API `Element` (15-07 au 11-08) <Badge text="4 semaines" color="#0c6ccd" />
+- Août&nbsp;:
+  - Les attaques (12-08 au 18-08)
+  - Objets natifs JavaScript (partie 4) (19-08 au 01-09) <Badge text="2 semaines" color="#0c6ccd" />
+- Septembre&nbsp;:
+  - Nettoyage des pages et resynchronisations de plus de 500 pages maintenues (02-09 au 08-09)
+
+Ouf&nbsp;! Ça en fait des mises à jour en une année. Elles ont bougé et modifiées plus de 6500 pages sur les actuellement 7613 traduites (relevé le 09/09/2026 à 10:22) qui existent.
+
+### Comparaison de l'année écoulée avec son point de départ
+
+Dans notre [relevé des statistiques](/blog/outils/septembre-2026/releves-des-traductions) sortit le même jour, vous pouvez retrouver en détails toutes les statistiques des diverses catégories. Vous pouvez remarquer que les catégories citées ci-dessus sont notamment les catégories les plus à jour grâce à l'effort colossal qui a été mis en place pour y parvenir.
+
+Mais dans une certaines formes de rétrospective, il est plus impressionnant de voir la différence entre aujourd'hui et le MDN de septembre 2025.
+
+<StatTable>
+  <StatHeader />
+  <StatRow translated={9} outdated={5388} untranslated={8482}>Sur 13&nbsp;879 pages en 2025</StatRow>
+  <StatRow translated={5027} outdated={2587} untranslated={7007}>Sur 14&nbsp;621 pages en 2026</StatRow>
+</StatTable>
+
+Le MDN anglais a grossi de plus de 800 pages durant l'année écoulée, et pourtant, nous avons pu traduire 2300 pages pendant la même période pour ralentir le retard de façon significative.
+
+La mise à jour de pages existantes et la traduction de nouvelles pages sont toutes les deux un 50/50 dans cet effort.
+
+## Les prochaines étapes et les changements
+
+Après cette période avec un système de cycle, il a finalement été noté qu'une semaine c'était trop court sur des sujets aussi larges que le JavaScript, certaines API, et plus tard pour des sujets plus poussés.
+
+De ce fait, le cycle des nouvelles mises à jour de traduction et actualisation sera plutôt de 2 semaines. Et sera calé entre les mises à jour de Firefox qui sont maintenant de 1 toutes les deux semaines depuis le 1<sup>er</sup> septembre 2026.
+
+Cela va permettre de traiter ou terminer les sujets suivants&nbsp;:
+
+- Sujets ouverts
+  - Guides CSS
+  - En-têtes HTTP
+  - Guides HTTP
+  - Objets natifs JavaScript
+- Prochains sujets
+  - Guides SVG
+  - Éléments SVG
+  - Attributs SVG
+  - Versions de Firefox de 44 à 142 (toutes celles qui manquent actuellement)
+  - Guides JavaScript
+  - Erreurs JavaScript
+  - Opérateurs JavaScript
+  - Instructions JavaScript
+  - Expressions relationnelles (RegEx) JavaScript
+  - Quelques API qui n'ont pas de pages traduites.
+
+_Fait amusant&nbsp;: La section API représente environs 55&nbsp;% (de manière TRÈS arrondie) des pages du MDN. Vous me croyez pas&nbsp;? 8&nbsp;092 pages sur 14&nbsp;621 ça vous donne quoi sur une calculatrice&nbsp;? Allez-y, faites le calcul&nbsp;!_
+
+Selon vous ? Quelle serait l'API que vous voudriez voir traduite en français dans les prochains mois&nbsp;? N'hésitez pas à venir nous les proposer et à en débattre sur le salon de discussion [Matrix/Element #l10n-fr](https://matrix.to/#/#l10n-fr:mozilla.org).
+
+Enfin, lorsque vous trouvez un problème dans un exemple, une phrase mal écrite ou une erreur de traduction, n'hésitez pas à nous les signaler directement grâce au lien qui se situe en bas de toutes les pages de la documentation nomme «&nbsp;Signaler un problème avec ce contenu&nbsp;»
+
+## Voir aussi
+
+- [Le MDN Web Docs francophone](https://developer.mozilla.org/fr/)
+- [Le dépôt MDN des pages traduites <sup>(angl.)</sup>](https://github.com/mdn/translated-content) sur github.com
+- [Tableau de suivi des états de traduction des pages du MDN <sup>(angl.)</sup>](https://tristantheb.github.io/history-content/) sur github.io
