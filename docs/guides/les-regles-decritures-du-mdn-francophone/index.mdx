@@ -216,6 +216,29 @@ class Etudiant extends Personne {
 Cet exemple n'est bien entendu pas fait pour être utilisé en production, nous avons omis les vérifications pour des raisons de concision.
 :::
 
+## Les liens externes
+
+Le MDN fait référence à des contenus externes comme Wikipedia pour ajouter du contexte à certaines informations. Pour ouvrir la possibilité de se documenter sur des sujets qui ne seront pas abordés directement dans la documentation du MDN, ou approfondir le sujet abordé avec des études, des exemples interactifs créé par d'autres personnes, etc.
+
+Ces liens ne conduisent pas toujours vers du contenu en français. De ce fait, nous annotons les liens externes qui sont dans une langue étrangère par un marqueur de langue.
+
+Par exemple, pour l'anglais qui est la langue la plus communément utilisée dans les liens externes, le marqueur est `<sup>(angl.)</sup>`.
+
+Il est bien entendu pas nécessaire de mettre cette annotation s'il existe un lien vers une version française. Il faut à la place, utiliser directement le lien français.
+
+:::info[Note]
+Uniquement si le contenu référencé en français est suffisamment complet.
+
+Il arrive par exemple que des pages, comme par exemple sur Wikipedia, soient vides en français et bien plus complètes en anglais. La page anglaise gagne donc le référencement au détriment de la page française. Jusqu'à ce que la page française mérite de nouveau d'être citée.
+:::
+
+### Exemples
+
+```markdown
+[Un lien vers un exemple anglais dont au minimum le titre est traduit pour aider à la lecture avant de signaler que le contenu est en anglais avec <sup>(angl.)</sup>](https://example.com) par _un auteur_
+[Un lien de Wikipedia qui a un contenu français](https://example.com) sur Wikipedia
+```
+
 ## L'inclusivité
 
 Le MDN est ouvert à de nombreuses communautés qui visitent et lisent les diverses pages et articles, compris dans les diverses catégories disponibles.
@@ -337,3 +360,42 @@ Il existe beaucoup de cas où la bonne traduction à adopter n'est pas la premi�
 :::
 
 En raison du nombre important de faux amis, nous ne pouvons pas lister tous les exemples ici.
+
+## Les liens de bas de page
+
+Dans un nombre important de pages, vous pouvez trouver une section nommée «&nbsp;Voir aussi&nbsp;». Elle permet de fournir des références à des éléments qui ont été abordés dans le contenu, des références associées ou même des contenus externes qui apportent des compléments d'information ou des outils ludiques.
+
+Certains liens se trouvant dans cette catégorie font référence directement à des pages internes du MDN et pour aider à différencier le type de contenu de la page, nous annonçons le sujet avec le lien.
+
+Par exemple, si le lien va vers une propriété CSS, nous écrivons «&nbsp;La propriété CSS _macro-cssxref_&nbsp;», si l'on se trouve déjà dans la catégorie CSS, nous omettons de dire que c'est du CSS.
+
+### Exemples
+
+Ici, nous sommes déjà dans une page HTML, alors l'élément HTML qui est référencé ne prend pas le nom de sa catégorie.
+
+```markdown title="Une page HTML"
+…
+
+## Voir aussi
+
+- L'élément {{HTMLElement("a")}}
+- La pseudo-classe CSS {{CSSxRef(":active")}}
+- La pseudo-classe CSS {{CSSxRef(":hover")}}
+- La pseudo-classe CSS {{CSSxRef(":visited")}}
+```
+
+De la même manière pour cet évènement API, la catégorie est déjà explicitement connue lors de la visite par le contenu de la page et le fil d'Ariane.
+
+```markdown title="Une page API"
+…
+
+## Voir aussi
+
+- L'élément HTML {{HTMLElement("a")}}
+- L'évènement {{DOMxRef("HTMLAnchorElement.click_event", "click")}}
+- Le code de statut HTTP {{HTTPStatus(200, "200 Success")}}
+```
+
+En plus d'annoncer le type de contenu, cela permet aussi de différencier les éléments qui se ressemblent. Par exemple si vous référencez la balise `<a>` de HTML et de SVG dans la même page, lorsque vous appelez le lien, visuellement, le rendu est le même. Impossible de les différencier sans survoler ou cliquer.
+
+Il est important de guider le·la lecteur·ice, en plus d'apporter des indications qui seront appelées par les lecteurs d'écrans pour les personnes malvoyantes.
