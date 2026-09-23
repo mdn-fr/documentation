@@ -1,0 +1,337 @@
+---
+title: Les règles d'écritures du MDN francophone
+slug: /guides/les-regles-decritures-du-mdn-francophone
+keywords: [guides, markdown, règles, syntaxe, formulations]
+tags: [guides, markdown]
+---
+
+Afin d'harmoniser les pages du MDN, nous appliquons des règles sur les formulations des phrases pour nous assurer que toutes les pages soient comprises de la même manière par tou·te·s.
+Cette harmonisation passe par plusieurs règles d'orthographe, de grammaire et de conjugaison à respecter, ainsi que des styles d'écritures à appliquer.
+
+:::danger[Notes relatives à **l'intelligence artificielle**]
+Les contenus traduits par IA ne sont pas acceptés. En effet, laisser faire le travail par un outil non fiable, n'est ni recommandé, ni accepté.
+
+Les agents ne respectent aucune convention ou règle et ne prendront jamais en compte des fichiers de règles que vous leur donnerez. Ils feront toujours les mauvais choix, de mauvaises phrases, et des erreurs de positionnement flagrante qui sont illisibles une fois les pages rendues pour un·e humain·e.
+
+De ce fait, nous ne prenons pas en charge les Requêtes de tirages dont la traduction est faite de manière flagrante par IA. Il est également totalement inutile de demander à une IA de valider ou relire votre PR, seuls des humains valident les PR.
+:::
+
+Dans ce guide, nous voyons comment appliquer toutes ces règles et à quel moment les prendre en compte, car il existe également des exceptions aux plus grandes règles.
+
+## Le temps dans les phrases
+
+Nous décrivons des éléments divers au travers des pages, ces éléments peuvent effectuer des actions et donc créer un ou plusieurs résultats durant l'exécution de ces derniers. Ces actions ayant pour principe de fournir le résultat ou une erreur dans l'immédiateté perçue par une personne (cela est en réalité moins immédiat&nbsp;: temps de réponse optique entre l'œil et le cerveau + temps de transmission de l'information de la machine à l'écran, mais les temps sont si courts qu'ils paraissent instantanés), et c'est pourquoi nous utilisons toujours le **Présent de l'indicatif**.
+
+Les titres utilisent également le présent lorsqu'il y a des verbes, mais le verbe d'action qui est placé en premier dans le titre est à **l'Infinitif**. Certains [titres sont mêmes pré-définis à l'avance dans les règles du MDN](#les-titres-définis-par-le-mdn).
+
+Un mot comme en cent&nbsp;: **Voix active, présent de l'indicatif.**
+
+### Exemples
+
+```markdown
+## Description
+
+Lorsque vous cliquez sur le bouton, vous déclenchez une action qui peut être interceptée par le gestionnaire d'évènements, et traitée dans un script en incise ou embarqué.
+
+### Gérer les évènements
+
+…
+```
+
+## Les caractères de ponctuation insécables
+
+Divers caractères sont utilisés pour mettre en forme les phrases, et certains ont des règles dans la langue française, dont vous avez possiblement déjà vu le formatage dans un éditeur de texte avec un rectangle grisé qui représente l'insécable.
+
+Le MDN utilise le MarkDown, un langage de haut niveau qui permet de ne pas s'embêter de la structure HTML et de s'implement gérer le texte directement, cependant, le Markdown prend tout de même en charge les entités HTML. C'est pourquoi pour les éléments insécables, vous pouvez trouver des `&nbsp;` (<i lang="en">non-breaking space</i> en anglais) dans les codes sources des pages.
+
+L'utilisation de l'insécable est obligatoire, cela évite que les caractères qui le nécessitent ne retournent à la ligne en cas de dépassement de cette dernière.
+
+Attention cependant, les titres n'ont pas le droit d'utiliser les espaces insécables&nbsp;!
+
+### Exemples
+
+```markdown
+Nous pouvons par exemple&nbsp;:
+
+…
+
+Ouf&nbsp;! Ça en fait des Firefox&nbsp;!
+```
+
+### Contre-exemples
+
+Les unités ne doivent pas utiliser d'espacement, peu importe le type d'espacement.
+
+```markdown
+<!-- bad-example -->
+La valeur de 125 ms n'est pas perceptible pour l'œil humain.
+```
+
+```markdown
+<!-- bad-example -->
+La valeur de 125&nbsp;ms n'est pas perceptible pour l'œil humain.
+```
+
+```markdown
+<!-- good-example -->
+La valeur de 125ms n'est pas perceptible pour l'œil humain.
+```
+
+## Les apostrophes et le markdown/html
+
+Les sites auto-traduits laissent toujours passer ce type d'erreur qui détruit l'accessibilité des utilisateur·ice·s qui utilisent un lecteur d'écran, séparer le premier mot avant une apostrophe par du HTML ou une balise Markdown. C'est une très grosse erreur à éviter et à corriger immédiatement si vous la croisez.
+
+Par exemple, vous pouvez être tenté de traduire `the {{DOMxRef("History API", "History API", "", "nocode")}}` qui est affiché comme `the History API` comme suit&nbsp;:
+
+`l'{{DOMxRef("History API", "API History", "", "nocode")}}`
+
+Et là c'est le drame&nbsp;! Car le lecteur d'écran va dire à l'oral&nbsp;: « **L** apostrophe. Lien. API History. ».
+
+Félicitation, ceci vient de couper la bonne lecture de la phrase. Les agents IA et les traducteurs automatiques font tous cette erreur, ils ne sont pas de confiance, et doivent absolument être évités ou bannis lorsque vous traduisez.
+
+La pratique qui respecte les règles ARIA est la suivante&nbsp;:
+
+```markdown
+<!-- Le point de départ -->
+… the {{DOMxRef("History API", "History API", "", "nocode")}} …
+
+<!-- La bonne façon de traduire -->
+<!-- good-example -->
+… {{DOMxRef("History API", "l'API History", "", "nocode")}} …
+```
+
+Ce qui donnera ceci en HTML&nbsp;:
+
+```html
+… <a href="…">l'API History</a> …
+```
+
+Voyez comment le déterminant et son apostrophe sont correctement inclus dans le Markdown et une fois reconvertis en HTML, le sont dans le lien final. Le lecteur d'écran annonce les liens proprement formatés comme suit&nbsp;: «&nbsp;Lien. l'API History&nbsp;».
+
+Cela s'applique tout le temps du moment que vous avez une apostrophe qui précède une balise de gras, d'italique, de lien, de code, etc.
+
+Attention également pour les balises de code, vous allez être tenté de mettre une apostrophe avant la balise de code, c'est une très mauvaise idée. Utilisez un déterminant entier à la place.
+
+Par exemple, au lieu de faire&nbsp;:
+
+```markdown
+<!-- bad-example-start -->
+l'`element`
+l'`id`
+<!-- bad-example-end -->
+```
+
+Il vaut mieux faire&nbsp;:
+
+```markdown
+<!-- good-example-start -->
+un `element`
+un `id`
+<!-- good-example-end -->
+```
+
+De la même manière qu'un lien, les balises de codes ne sont pas lues comme la continuité de la phrase, mais comme un élément qui vient casser l'incise.
+
+## Les chiffres et nombres
+
+L'écriture de grandes valeurs peut parfois arriver durant des explications de code ou de concepts dans certains guides de la documentation.
+
+Afin de ne pas complexifier la lecture de ces valeurs, il existe deux méthodes d'écriture à garder à l'esprit&nbsp;; la première pour des valeurs dans du texte à traduire, la seconde lorsqu'elles sont dans du balisage de code.
+
+Lorsqu'un nombre dépasse les 4 chiffres, l'espacement du millier est nécessaire. Les nombres à virgules utilisent la virgule française uniquement hors balisage de code.
+
+| Dans du texte à traduire | Dans du code      |
+| ------------------------ | ----------------- |
+| 1                        | `1`               |
+| 1,5                      | `1.5`             |
+| 1025                     | `1025`            |
+| 65 000                   | `65000`           |
+| 78 678 123 753,345       | `78678123753.345` |
+
+## Le code : classes, identifiants, fonctions, propriétés, méthodes, classes et autres
+
+Le code présenté sur le MDN dans les exemples est, du code d'exemple. Cela signifie que vous pouvez traduire le code complètement. Seuls les éléments qui font partit des standards gardent les nommages d'origine.
+
+Les méthodes et propriétés avec un verbe utilisent l'infinitif pour décrire l'action, par exemple `gererRechargement()`.
+
+Les nommages en français permettent aux débutant·e·s de facilement comprendre le fonctionnement ou l'utilité de la fonctionnalité présentée. Mais aussi lors de la lecture de la page, d'éviter de devoir changer sa concentration entre deux langues, sauf lorsqu'il s'agit d'éléments présentant des traductions ou des littéraux de langue étrangères.
+
+### Exemples
+
+Voici un exemple de la page de [l'élément HTML `<rp>`](https://developer.mozilla.org/fr/docs/Web/HTML/Reference/Elements/rp#exemple_interactif)&nbsp;:
+
+```html live
+<ruby>
+  漢 <rp>(</rp><rt>kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+</ruby>
+```
+
+Ici, nous ne traduisons pas le contenu de l'exemple, car il montre l'utilisation commune d'un élément qui est utilisée pour certaines langues précises.
+
+En revanche, lorsqu'il s'agit de contenu anglais qui n'est pas lié à un exemple qui fait une comparaison entre l'anglais, et une ou plusieurs autres langues, alors la traduction s'applique&nbsp;:
+
+```html
+<p class="boite-information">Ceci est une boîte d'information.</p>
+
+<output id="journal"></output>
+```
+
+L'exemple est traduit en français et fonctionne correctement par&nbsp;:
+
+- Les classes et identifiants respectent les standards, pas d'accents, pas de caractères spéciaux, uniquement des lettres et caractères autorisés.
+- Le JavaScript et le CSS peuvent utiliser ces nommages sans soucis, car ils appliquent les mêmes standards sur le nommage.
+
+```javascript
+const boiteInformation = document.querySelector('.boite-information');
+const journal = document.getElementById('journal');
+
+// Faire quelque-chose avec ces éléments
+```
+
+Si la constante avait été nommée boîteInformation, l'accent aurait cassé le code. N'utilisez jamais d'accents dans les nommages du moment que vous n'êtes pas dans du texte, une chaîne de caractères ou un commentaire.
+
+Un dernier exemple pour la route avec une classe pour comprendre à quel point la traduction est possible&nbsp;:
+
+```javascript {2,4,9,14}
+// Les deux classes ne sont pas natifs, nous les avons créés, donc elles peuvent être traduites.
+class Etudiant extends Personne {
+  // L'instruction "constructor" est native, on ne doit pas la traduire
+  constructor(nom, age) {
+    super(nom, age);
+  }
+
+  // L'action pour le mutateur "set" avec le verbe approprié
+  definirClasse(classe) {
+    this.classe = classe;
+  }
+
+  // L'action pour l'accesseur "get" avec le verbe approprié
+  obtenirClasse() {
+    return this.classe;
+  }
+}
+```
+
+:::warning
+Cet exemple n'est bien entendu pas fait pour être utilisé en production, nous avons omis les vérifications pour des raisons de concision.
+:::
+
+## L'inclusivité
+
+Le MDN est ouvert à de nombreuses communautés qui visitent et lisent les diverses pages et articles, compris dans les diverses catégories disponibles.
+
+En application des règles d'écriture et de la communauté de Mozilla, s'appliquant au MDN, nous appliquons l'utilisation de l'écriture épicène dans toutes les pages ainsi que dans les menus de pied de page.
+
+Les règles appliquées sont tirées de l'utilisation faite au Québec.
+
+### Application des règles
+
+Les règles qui sont appliquées sont les suivantes&nbsp;:
+
+- Pas de «&nbsp;iel&nbsp;», ceci n'est ni un mot, ni une syntaxe valide. Ceci est un suffixe. La langue française comporte suffisamment de complexité pour ne pas être rendue impossible à comprendre pour une personne étrangère qui apprend la langue.
+- Pas d'application de l'écriture épicène sur les mots précédés d'une action.
+- Pas d'écriture épicène dans les titres de sections et les sous-titres de niveau 3 et 4.
+- L'écriture doit appliquer l'usage du point médian <kbd>Alt</kbd> + <kbd>0183</kbd> («&nbsp;·&nbsp;»).
+- Le pluriel doit être séparé de la même manière.
+- Les éléments techniques gardent leurs syntaxes et accords.
+
+### Exemples
+
+```markdown
+<!-- Dans une phrase -->
+un·e visiteur·euse a cliqué·e
+il·elle est déplacé·e vers…
+
+<!-- Les pluriels -->
+les développeur·euse·s
+ils·elles sont…
+
+<!-- Le contenu informatique -->
+l'agent utilisateur
+l'interface utilisateur
+le client HTTP/le serveur proxy
+```
+
+## Les titres définis par le MDN
+
+Dans la section communautaire du MDN, il existe une liste de pages contenant un exemple de chaque type de pages qui existent&nbsp;: Les classes JavaScript, Les propriétés CSS, Les méthodes d'API, etc.
+
+Cette section apporte également des titrages de sections qui sont pré-définis et obligatoires. La méthode d'écriture ne doit jamais changer, et la traduction de ces pages comporte donc également les titres définis pour la langue Française. Il est donc obligatoire de respecter ces titres et de ne pas les remplacer par d'autres.
+
+Consultez la liste de ces pages dans [Types de pages](https://developer.mozilla.org/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types#mod%C3%A8les_de_page).
+
+## Les macros
+
+Le MDN utilise des macros pour appeler une référence à une autre page du MDN, les macros sont expliquées [dans notre guide qui les détaillent](/docs/guides/les-macros-et-leur-fonctionnement), elles sont très utilisées pour appeler des pages de référence à des éléments HTML, propriétés CSS, etc.
+
+D'autres macros techniques permettent de mettre en forme des exemples dans un cadre interactif.
+
+Les macros ont plusieurs types de données possibles&nbsp;: Chaîne de caractères, Nombre et Booléen.
+
+- Les chaînes de caractères doivent être délimitées avec des guillemets doubles seulement (`"`).
+- Les nombres ne reçoivent aucune délimitation, sauf quand une unité en pourcentage est écrite. On remplace toujours les pixels par son équivalent numérique.
+- Les booléens peuvent être remplacés par `0` et `1`, sinon vous pouvez écrire `true` et `false` sans délimitations.
+
+Pourquoi des guillemets doubles&nbsp;: Les blocs d'exemples font appel au titre de l'exemple qui peut contenir des apostrophes, l'usage de guillemets simples casse donc les exemples ou oblige à échapper les apostrophes, ce qui n'est pas esthétique à la relecture et peut poser des soucis divers.
+
+Une des exceptions est que les guillemets doubles sont nécessaires pour les éléments HTML complexes, mais dans la plus grande majorité des cas, aucun échappement n'est nécessaire grâce aux guillemets doubles. L'autre exception est lorsque vous appelez la page parente d'une API, où l'on désactive le mode code de la macro pour rendre « l'API MachinTruc » comme un seul texte.
+
+### Exemples
+
+```markdown
+<!-- ` pour afficher en code, &lt; et &gt; pour faire les chevrons, \" pour afficher les guillemets dans le résultat et ne pas casser la macro. -->
+`{{HTMLElement("input/text", "&lt;input type=\"text\"&gt;")}}`
+
+<!-- ' n'est pas dérangée grâce à l'utilisation des " -->
+{{DOMxRef("Sensor_API", "l'API Sensor", "", 1)}}
+
+<!-- Pareil ici -->
+{{InteractiveExample("Utiliser l'attribut HTML `id`", "100%", 150)}}
+```
+
+Observez comment pour afficher l'élément HTML, les guillemets sont échappés pour rendre proprement le code avec le HTML comme s'il était écrit dans une balise de code et comment l'API est écrite pour pouvoir s'afficher comme un lien clair.
+
+## La terminologie
+
+Selon la section que vous visitez sur le MDN, vous allez trouver différentes terminologies&nbsp;; certaines peuvent provenir du même mot anglais mais avoir une traduction différente qui est propre à son contexte et sa section.
+
+C'est pour cela que vous devez au préalable consulter les pages voisines ou traitant certains sujets associés pour retrouver les terminologies à utiliser. Lorsque la terminologie n'est pas connue, elle est également annotée.
+
+### Exemple : Les promesses
+
+Pour toutes terminologies que vous introduisez et qui n'est pas connue, vous devez fournir au moins une fois sa version anglais annotée de manière conventionnelle comme suit&nbsp;:
+
+```markdown
+L'interface **`Promise`** crée des objets représentant des promesses et définit trois états&nbsp;: en attente (<i lang="en">pending</i> en anglais), complétée (<i lang="en">fulfilled</i> en anglais) et rompue (<i lang="en">rejected</i> en anglais). Il peut exister un état intermédiaire lorsque vous vous trouvez dans une semi-promesse (<i lang="en">thenable</i> en anglais) qui correspond à l'acquittement (<i lang="en">settled</i> en anglais).
+```
+
+Ce qui donne&nbsp;:
+
+_L'interface **`Promise`** crée des objets représentant des promesses et définit trois états&nbsp;: en attente (<i lang="en">pending</i> en anglais), complétée (<i lang="en">fulfilled</i> en anglais) et rompue (<i lang="en">rejected</i> en anglais). Il peut exister un état intermédiaire lorsque vous vous trouvez dans une semi-promesse (<i lang="en">thenable</i> en anglais) qui correspond à l'acquittement (<i lang="en">settled</i> en anglais)._
+
+Cela permet d'introduire des concepts techniques complexes tout en fournissant une référence française à des mots qui ne seront traduits nulle part ailleurs, de la bonne manière.
+
+### Exemple : Faux amis, en ligne ou en incise ?
+
+C'est également une chose à laquelle faire attention, la manière de traduire les mots peut varier en fonction du contexte, mais aussi des faux amis. Un exemple fréquent dans les pages que vous pouvez rencontrer est _inline_, _in line_, _in row_ et _online_.
+
+- Code
+  - Dans le contexte de «&nbsp;inline code/inline script&nbsp;», on parle de code **en incise**.
+- Réseau
+  - Dans le contexte de «&nbsp;online&nbsp;», on parle de **en ligne**.
+- Boîtes flexibles, Colonnes, Grilles, Tableaux
+  - Dans le contexte de «&nbsp;in line&nbsp;», on parle de **en ligne/dans une ligne**.
+  - Dans le contexte de «&nbsp;in row&nbsp;», on parle de **dans la ligne/dans la rangée**.
+
+Voyez comment avec deux termes, nous en arrivons à 4 méthodologies différentes.
+
+:::info[Note]
+Il existe beaucoup de cas où la bonne traduction à adopter n'est pas la première qui vous vient. Lisez bien les pages voisines pour récupérer le contexte et les mots associés aux termes anglais que vous allez devoir traduire, ou corriger.
+  :::note
+  - Ne le faites pas faire par un outil de traduction.
+  - Ne le faites pas faire par un outil IA.
+
+  Dans les deux cas, vous aurez un résultat faux.
+:::
+
+En raison du nombre important de faux amis, nous ne pouvons pas lister tous les exemples ici.
