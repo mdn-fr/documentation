@@ -126,6 +126,117 @@ Depuis la page, vous avez plusieurs outils qui sont proposés en haut :
 
 Félicitation, vous avez terminé de mettre en place votre environnement de travail, vous êtes prêt·e à contribuer au MDN en commençant à modifier les pages que vous souhaitez.
 
+## Astuces supplémentaires
+
+### Masquer les autres locales
+
+Si vous venez à utiliser 2 fenêtres de Visual Studio Code en même temps pour avoir le comparatif entre l'anglais et le français, créez-vous un dossier `.vscode` dans le dépôt des traductions pour ajouter la configuration suivante&nbsp;:
+
+```json title=".vscode/settings.json"
+{
+  "files.exclude": {
+    "/files/es/": true,
+    "/files/ja/": true,
+    "/files/ko/": true,
+    "/files/pt-br/": true,
+    "/files/ru/": true,
+    "/files/zh-cn/": true,
+    "/files/zh-tw/": true
+  },
+}
+```
+
+Cela vous permet de pouvoir ouvrir rapidement des pages avec le combo de touches <kbd>Ctrl</kbd> + <kbd>P</kbd> sans avoir les autres locales dans la liste de recherche.
+
+Le dossier `.vscode` est ignoré par les règles du dépôt et ne sera donc pas inclus dans vos instantanés de modifications.
+
+### Installer des extensions pour corriger le contenu
+
+Voici quelques extensions recommandées pour le contenu traduit&nbsp;:
+
+- **Gremlins**&nbsp;: Cette extension permet de signaler les caractères unicodes qui sont interdits.
+- **Markdown Lint**&nbsp;: Cette extension va prendre en compte la configuration du dépôt et vous signaler toutes les erreurs Markdown que vous avez dans vos fichiers. Ces erreurs sont bloquantes dans les Requêtes de tirage, Reviewdog les prend en compte et interdira la fusion de votre requête.
+- **cSpell**&nbsp;: Cette extension permet de vérifier l'orthographe dans vos fichiers, il faut cependant lui donner une configuration adaptée aux langages et à la langue traduite.
+
+  Voici un exemple de configuration à ajouter dans votre dossier `.vscode`&nbsp;:
+
+  ```json title=".vscode/cspell.json"
+  {
+    "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+    "version": "0.2",
+    "caseSensitive": false,
+    "useGitignore": true,
+    "language": "fr,lorem",
+    "languageSettings": [
+      {
+        "languageId": "markdown",
+        "dictionaries": [
+          "css",
+          "fonts",
+          "html",
+          "mathml",
+          "javascript",
+          "php",
+          "svg"
+        ]
+      }
+    ],
+    "ignoreRegExpList": [
+      // Macros
+      "{{\\s?\\w*",
+      "{{\\s*EmbedInteractiveExample\\(.*\\)\\s*}}",
+      "{{\\s*EmbedLiveSample\\(.*\\)\\s*}}",
+      "{{\\s*EmbedYouTube\\(.*\\)\\s*}}",
+      "{{\\s*EmbedGHLiveSample\\(.*\\)\\s*}}",
+      "live-sample___[\\w-]+",
+      // Markdown links
+      "\\]\\(\\S*\\)",
+      // Website references
+      "[\\w\\-.]+\\.(com|net|org|ac\\.uk)\\b",
+      // Things like "**J**ava**S**cript"
+      "\\*\\*\\w+\\*\\*\\w*",
+      "\\*\\w+\\*\\w*",
+      "#[À-ž\\w-]*",
+      // Percent-encoding
+      "[A-Za-z]*%[A-F0-9]{2}[A-Za-z]*",
+      // Various HTML attributes that often have non-word values
+      "aria-activedescendant=\"[^\"]+\"",
+      "aria-controls=\"[^\"]+\"",
+      "aria-describedby=\"[^\"]+\"",
+      "aria-details=\"[^\"]+\"",
+      "aria-errormessage=\"[^\"]+\"",
+      "aria-flowto=\"[^\"]+\"",
+      "aria-labelledby=\"[^\"]+\"",
+      "aria-owns=\"[^\"]+\"",
+      "class=\"[^\"]+\"",
+      "data-test-id=\"[^\"]+\"",
+      "for=\"[^\"]+\"",
+      "pattern=\"[^\"]+\"",
+      "href=\"[^\"]+\"",
+      "(?<!\\w)id=\"[^\"]+\"",
+      "lang=\".*\">.*</",
+      "src=\"[^\"]+\"",
+      "HexValues",
+      "Base64",
+      // Any base64 in data URLs, even those shorter than 40 chars (which don't match Base64 regex)
+      "data:[^\\s;]+;base64,[a-zA-Z0-9/+=…]*",
+      "[Ee][Tt]ag: ([\\w-]+|\"[\\w-]+\")"
+    ],
+    "flagWords": [
+      /*
+      "motInterdit",
+      "motInterdit2->correction",
+      "motInterdit3->correction1, correction2, correction3",
+      */
+    ],
+    "diagnosticLevel": "Error"
+  }
+  ```
+
+  :::info[Note]
+  Ajoutez vos mots à signaler et leurs corrections ici comme ça vscode vous les signale et si vous donnez une liste de corrections, il vous les propose avec <kbd>Ctrl</kbd> + <kbd>;</kbd>
+  :::
+
 ## Résumé
 
 Nous avons mis en place l'environnement local pour ouvrir le serveur local Fred et afficher les pages des dépôts de contenu. Nous pouvons maintenant aborder les différentes façons de contribuer au MDN grâce à un environnement dédié.
