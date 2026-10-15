@@ -1,5 +1,27 @@
 # Changelog
 
+## [1.1.2](https://github.com/mdn-fr/documentation/compare/v1.1.1...v1.1.2) (2026-10-15)
+
+
+### Miscellaneous
+
+* add complementary informations for vscode env ([39fd90e](https://github.com/mdn-fr/documentation/commit/39fd90ed8b1728b61d09782fefbe4a62b7071ac7))
+* **deps-dev:** bump lefthook from 2.1.12 to 2.2.1 ([#105](https://github.com/mdn-fr/documentation/issues/105)) ([06d9e27](https://github.com/mdn-fr/documentation/commit/06d9e2731d0491384638b49c3df8b86ff7861482))
+* **deps:** bump actions/setup-node from 7.0.0 to 7.1.0 ([#108](https://github.com/mdn-fr/documentation/issues/108)) ([4218ab3](https://github.com/mdn-fr/documentation/commit/4218ab308f7952a64c070018d222f8a9a0fa862f))
+* **deps:** bump lucide-react from 1.49.0 to 1.53.0 ([#106](https://github.com/mdn-fr/documentation/issues/106)) ([55f15a5](https://github.com/mdn-fr/documentation/commit/55f15a52ae067bcd157955e89d971e3686fd6d01))
+* **deps:** bump node and npm version with all dependencies ([7e46a71](https://github.com/mdn-fr/documentation/commit/7e46a71af847b824a78343c603cd07accab3a2a8))
+* **deps:** bump the codeql-action group across 1 directory with 2 updates ([#107](https://github.com/mdn-fr/documentation/issues/107)) ([d578cd4](https://github.com/mdn-fr/documentation/commit/d578cd4685da3e526f3ec677f74591c6ac8f60a0))
+
+
+### Bug Fixes
+
+* kbd style for notes design ([d24f3fa](https://github.com/mdn-fr/documentation/commit/d24f3fae64ec500cb489c119eef8414a416db74b))
+
+
+### CI/CD changes
+
+* **dependabot:** set update interval to monday 8a.m ce(s)t ([0b6f8be](https://github.com/mdn-fr/documentation/commit/0b6f8be65e3b62890643b396881e17296bdecb3b))
+
 ## [1.1.1](https://github.com/mdn-fr/documentation/compare/v1.1.0...v1.1.1) (2026-10-04)
 
 
