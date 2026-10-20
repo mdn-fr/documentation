@@ -5,7 +5,7 @@ keywords: [guides, npm, localhost]
 tags: [guides]
 ---
 
-Pour pouvoir contribuer au MDN pleinement, en utilisant un environnement de développement local adapté à votre besoin, nous allons vous présenter les différents éléménts et étapes nécessaires pour préparer votre future contribution.
+Pour pouvoir contribuer au MDN pleinement, en utilisant un environnement de développement local adapté à votre besoin, nous allons vous présenter les différents éléments et étapes nécessaires pour préparer votre future contribution.
 
 ## Prérequis, avant de commencer
 
@@ -18,6 +18,8 @@ Pour pouvoir mettre en place un environnement de travail qui vous permettra de c
 | [Node.js](https://nodejs.org/) `24.14.0` et npm `11.9`            | Moyenne    |
 
 Installer un éditeur ou utiliser votre éditeur favori pour préparer votre environnement de travail. Nous avons mis VSCode puisque nous proposons également un plugin dédié aux macros et leur syntaxe.
+
+Pensez également à [Bifurquer le dépôt de travail](/docs/contribuer/mettre-en-place-son-depot-bifurque) pour y publier vos branches de travail qui seront utilisées pour les requêtes de tirage.
 
 ## Cloner les dépôts qui vont permettre de travailler localement
 
