@@ -9,6 +9,51 @@ import TabItem from '@theme/TabItem';
 
 Maintenant que [votre environnement de travail est installé](/docs/contribuer/mettre-en-place-un-environnement-de-developpement-local), vous pouvez commencer à effectuer des actions pour contribuer au MDN. Avant tout, pensez à lire les [Règles d'écritures](https://developer.mozilla.org/docs/MDN/Writing_guidelines) et les [Règles de conduite](https://developer.mozilla.org/docs/MDN/Community/Community_Participation_Guidelines) avant de contribuer.
 
+### Gérer les liens distants aux dépôts
+
+Avant de modifier des pages et de les proposer, l'exemple suivant du dépôt `translated-content` vous présente comment lier le dépôt principal et le dépôt [que vous avez bifurqué précédemment](/docs/contribuer/mettre-en-place-son-depot-bifurque#bifurquer-le-dépôt-principal), mais vous pouvez appliquer ceci à d'autres dépôts.
+
+Lorsque vous clonez le dépôt bifurqué sur votre machine, vous créez un lien vers le dépôt distant que Git appel «&nbsp;<i lang="en">remote</i>&nbsp;» en anglais. Préférez cloner le dépôt principal et ajouter votre dépôt bifurqué comme lien secondaire.
+
+Pourquoi faire comme ça&nbsp;:
+
+1. Le dépôt principal vous permet de récupérer le contenu récent facilement. Si vous utilisez l'outil de bureau de GitHub, il va vous proposer automatiquement de récupérer les dernières fusions.
+2. Votre dépôt de travail est disponible par le biais d'une commande pour y envoyer les branches et n'a pas besoin d'être le dépôt en «&nbsp;origine&nbsp;».
+
+Voici donc comment ajouter en dépôt secondaire votre version bifurquée du dépôt des traductions&nbsp;:
+
+```bash title="BASH"
+git remote add translation https://github.com/<votre-utilisateur>/translated-content.git
+```
+
+Si vous faites la commande suivante, vous verrez que vous avez 2 liens distants&nbsp;:
+
+```bash title="BASH"
+git remote -v
+```
+
+Vous devriez voir quelque chose comme ceci&nbsp;:
+
+```plain
+origin  https://github.com/mdn/translated-content.git (fetch)
+origin  https://github.com/mdn/translated-content.git (push)
+translation  https://github.com/<votre-utilisateur>/translated-content.git (fetch)
+translation  https://github.com/<votre-utilisateur>/translated-content.git (push)
+```
+
+Récupérez les mises à jour du dépôt qui contrôle les contenus publiés depuis `origin` et publiez vos modifications vers `translation`.
+
+Sur GitHub, vous pouvez mettre à jour votre dépôt bifurqué pour que sa branche `main` soit identique avec celle du dépôt d'origine grâce au bouton `Sync fork` disponible sur la page de votre dépôt bifurqué. Cela vous permet ensuite de synchroniser votre dépôt localement aussi pour que vos deux branches `main` soient à jour sur votre machine avec&nbsp;:
+
+```bash title="BASH"
+git fetch translation -p
+```
+
+Que fait cette commande&nbsp;:
+
+- Elle récupère l'état de tous vos branches du dépôt bifurqué.
+- Elle supprime la liaison des branches locales qui ont été supprimées du dépôt bifurqué. Cependant, vous devez supprimer les branches manuellement côté machine.
+
 ## Ajouter ou modifier du contenu
 
 Comme nous l'avons expliqué concernant [les chemins vers les fichiers](/docs/contribuer/mettre-en-place-son-depot-bifurque#bifurquer-le-dépôt-principal), vous allez devoir travailler selon les chemins des pages. De ce fait, pour modifier une page, ou ajouter une page, vous devez le faire de manière à ce que les dossiers correspondent au chemin de la page dans `slug`.
