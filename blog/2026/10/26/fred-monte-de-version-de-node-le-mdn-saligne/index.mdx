@@ -1,0 +1,46 @@
+---
+title: Fred monte de version de Node, le MDN s'aligne
+slug: /octobre-2026/fred-monte-de-version-de-node-le-mdn-saligne
+authors: [tristantheb]
+tags: [mdn, tools]
+---
+
+Jusqu'à présent, les dépôts du MDN évoluaient selon les besoins des ingénieurs sur les versions de Node.js qui étaient utilisées. Depuis le début de l'année 2026, de nombreux travaux d'alignement des versions des dépendances, aussi bien dans les scripts d'intégrations continues que dans les dépendances de NPM ont reçu des alignements.
+
+La semaine dernière, c'est la version de Node.js qui a été alignée pour tous les dépôts du MDN.
+
+{/* truncate */}
+
+En effet, depuis quelques-temps, les dépôts utilisaient plusieurs versions de Node.js, réparties entre 24.14.0 et 24.21.0. Cela créait des conflits entre les dépôts aussi bien d'un point de vue maintenance que d'un point de vue contribution.
+
+L'utilisation de plusieurs versions ne rendait pas possible l'accessibilité des contributions pour tous puisqu'il fallait avoir 4 versions de Node.js d'installées pour contribuer à Fred, MDN Anglais, MDN Traduit et un ou deux autres dépôts communs (par exemple Data).
+
+Maintenant, ce problème est résolu, grâce au changement apporté suite à l'ouverture du ticket [`fred/#2036`](https://github.com/mdn/fred/issues/2036) qui a introduit la version `24.22.1` dans tous les fichiers `.nvmrc`.
+
+Il est donc maintenant recommandé et cela pour l'entièreté des dépôts, d'utiliser cette version, et uniquement cette dernière. La version de NPM utilisée ne change pas et reste la version `11.9.0` et permet d'utiliser également les versions `11.9.x`.
+
+:::warning
+Notez également que cette montée de version répond également aux alertes et corrections de la faille connue sous le nom de [**eMudhra Intermediate CA Compromise** et plusieurs autres failles majeures](https://nodejs.org/en/blog/vulnerability/october-2026-security-releases).
+:::
+
+## Et si je n'utilise pas NVM ?
+
+NVM est un gestionnaire de version pour Node.js&nbsp;; ce dernier vous permet de changer de version rapidement et d'installer des versions de Node sans passer par un installateur.
+
+Si vous n'en faites pas l'utilisation, ce n'est pas grave, vous pouvez passer par la méthode classique d'installation depuis le site de [Node.js](https://nodejs.org/en/download).
+
+La version `24.22.1` est la version qui contient toutes les dernières corrections de sécurité concernant [les alertes récentes](https://nodejs.org/en/blog/vulnerability/october-2026-security-releases). Vous devez donc également passer sur cette version afin d'en bénéficier.
+
+## Note à l'incident de sécurité de PHP
+
+:::note
+Le MDN n'utilise plus MediaWiki depuis début 2021.
+:::
+
+Le MDN, depuis 2021, a totalement quitté l'utilisation du langage PHP pour le remplacer par JavaScript (TypeScript). Yari était le serveur et rendu basé sous Yarn pour la gestion de dépendance et s'est occupé du MDN jusqu'en août 2025. Depuis le MDN a de nouveau changé d'architecture pour Rari et Fred, le back-end basé sur Rust et le front-end basé sur du JavaScript pur (TypeScript a été abandonné définitivement en 2025).
+
+Nous sommes donc totalement écartés du problème, et c'est pour cela que l'incident n'a pas demandé au MDN de passer en mode de maintenance mercredi 21 octobre.
+
+De plus, sachez que le MDN n'effectue pas de maintenance à proprement parler, il ne fait que réactualiser ses pages une fois toutes les 24 heures et rendre le contenu statique sur le serveur une fois que tout est généré.
+
+Cela est pris en charge par le dépôt nommé Dex qui vient compiler Rari pour l'exécuter, générer les pages anglaises, traduites et allemandes, pour rendre les trois dépôts en 1 dossier de pages HTML statiques. Et rendre tout ce contenu accessible sur les serveurs du MDN.
