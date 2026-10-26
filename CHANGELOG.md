@@ -1,5 +1,37 @@
 # Changelog
 
+## [1.1.2](https://github.com/mdn-fr/documentation/compare/v1.1.1...v1.1.2) (2026-10-26)
+
+
+### Miscellaneous
+
+* add complementary informations for vscode env ([39fd90e](https://github.com/mdn-fr/documentation/commit/39fd90ed8b1728b61d09782fefbe4a62b7071ac7))
+* add previous guide link as backup ([12dabd7](https://github.com/mdn-fr/documentation/commit/12dabd7edb769d4907cb22a300dc3e1d001a9108))
+* add remote linking to fork guide ([14ffbb9](https://github.com/mdn-fr/documentation/commit/14ffbb918aa8f0c3a40518720aad1b39e43d0162))
+* bump node version to 24.22.1 to align with mdn ([c3715e6](https://github.com/mdn-fr/documentation/commit/c3715e6f1abc3395c6418a9dfee20f4caf469893))
+* **deps-dev:** bump lefthook from 2.1.12 to 2.2.1 ([#105](https://github.com/mdn-fr/documentation/issues/105)) ([06d9e27](https://github.com/mdn-fr/documentation/commit/06d9e2731d0491384638b49c3df8b86ff7861482))
+* **deps:** bump actions/setup-node from 7.0.0 to 7.1.0 ([#108](https://github.com/mdn-fr/documentation/issues/108)) ([4218ab3](https://github.com/mdn-fr/documentation/commit/4218ab308f7952a64c070018d222f8a9a0fa862f))
+* **deps:** bump lucide-react from 1.49.0 to 1.53.0 ([#106](https://github.com/mdn-fr/documentation/issues/106)) ([55f15a5](https://github.com/mdn-fr/documentation/commit/55f15a52ae067bcd157955e89d971e3686fd6d01))
+* **deps:** bump node and npm version with all dependencies ([7e46a71](https://github.com/mdn-fr/documentation/commit/7e46a71af847b824a78343c603cd07accab3a2a8))
+* **deps:** bump the codeql-action group across 1 directory with 2 updates ([#107](https://github.com/mdn-fr/documentation/issues/107)) ([d578cd4](https://github.com/mdn-fr/documentation/commit/d578cd4685da3e526f3ec677f74591c6ac8f60a0))
+* **glossary:** add String entry to glossary ([d9ab907](https://github.com/mdn-fr/documentation/commit/d9ab90741e0075e5a54565e8d7298ab10dfbf2ba))
+* move remote explain in advanced section to fix [#114](https://github.com/mdn-fr/documentation/issues/114) ([33e6ccc](https://github.com/mdn-fr/documentation/commit/33e6cccffa2b5c910e9f98185f98929a4ef950b6))
+* news about node 24.22.1 update in all mdn ([f9fb68f](https://github.com/mdn-fr/documentation/commit/f9fb68f2831dfff8cf07fc13ad5e7aef9668d737))
+* update design with img and code border ([e6ecf0b](https://github.com/mdn-fr/documentation/commit/e6ecf0bc933f2e1d968652caf02f94af3d382bc3))
+* update node version from nvm recommendation ([d248e81](https://github.com/mdn-fr/documentation/commit/d248e81f7bcbd5668694a6ebd672ecfa0eece592))
+
+
+### Bug Fixes
+
+* kbd style for notes design ([d24f3fa](https://github.com/mdn-fr/documentation/commit/d24f3fae64ec500cb489c119eef8414a416db74b))
+* mdx imports using path instead of `[@site](https://github.com/site)` ([70afbe9](https://github.com/mdn-fr/documentation/commit/70afbe9cc53d059c07ca496e81694e7b79dbd39d))
+
+
+### CI/CD changes
+
+* **dependabot:** set update interval to monday 8a.m ce(s)t ([0b6f8be](https://github.com/mdn-fr/documentation/commit/0b6f8be65e3b62890643b396881e17296bdecb3b))
+* reduce ubuntu to slim version ([23ff7f8](https://github.com/mdn-fr/documentation/commit/23ff7f8f3a2a01603417b58cbc3689f3e171317a))
+
 ## [1.1.1](https://github.com/mdn-fr/documentation/compare/v1.1.0...v1.1.1) (2026-10-04)
 
 
