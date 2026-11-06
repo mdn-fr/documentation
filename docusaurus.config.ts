@@ -20,6 +20,9 @@ const config: Config = {
   trailingSlash: false,
 
   onBrokenLinks: 'warn',
+  markdown: {
+    mermaid: true,
+  },
 
   i18n: {
     defaultLocale: 'fr',
@@ -194,6 +197,7 @@ const config: Config = {
     },
   } satisfies Preset.ThemeConfig,
 
+  themes: ['@docusaurus/theme-mermaid'],
   plugins: [
     '@docusaurus/theme-live-codeblock',
     [

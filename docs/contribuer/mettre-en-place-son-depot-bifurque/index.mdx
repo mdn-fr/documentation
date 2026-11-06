@@ -6,6 +6,41 @@ tags: [guides, github]
 
 Ce guide vous présent la méthode de contribution au MDN par le biais de modification des pages Markdown en utilisant l'interface de Github. Les dépôts sont bifurqués pour permettre à chacun de faire des modifications sans impacter le dépôt principal avec des actions potentiellement dangereuses.
 
+## Comprendre la structure du MDN
+
+Le MDN est divisé en plusieurs dépôts qui constituent chacun une partie fonctionnelle du site final. Pour pouvoir contribuer au MDN, vous avez besoin des dépôts essentiels qui sont tous regroupés sur GitHub pour permettre la contribution collaborative visant à améliorer ces outils.
+
+Le MDN que vous visitez tous les jours est composé ainsi&nbsp;:
+
+```mermaid
+---
+config:
+  layout: dagre
+---
+flowchart LR
+    front{"mdn/fred"}
+    content{"mdn/content"}
+    translated{"mdn/translated-content"}
+
+    front <-->|Fait le rendu du contenu| content
+    translated -->|Met à disposition la page traduite| content
+```
+
+Historiquement, le MDN fonctionnait sur une version de MediaWiki, nommé Kuma. C'est de ce nom que les macros du MDN proviennent à la base, Kumascript. Le 14 décembre 2020 a été lancé Yari, le remplaçant de Kuma. Cela a changé l'utilisation de la plateforme pour les traductions, puisque qu'il n'était plus nécessaire de passer par une interface web, tout se passait dans des fichiers HTML hébergés dur GitHub directement. Les locales de catégories 1 ont reçu leurs accréditations pour pouvoir modifier leurs pages et reprendre les traductions le 20 mars 2021.
+
+Les locales de catégories 2 ont rejoint le groupe de travail pour passer de 4 langues traduites (Français, Japonnais, les deux langues chinoises) à 8 langues en ajoutant l'Espagnol, le Coréen, le Portugais brésilien et le Russe.
+
+Durant l'année 2022, les pages ont progressivement été remplacées par du Markdown, qui est le langage globalement utilisé dans les pages du MDN. Cela rend les pages plus digestes à traduire et modifier, et moins contraignante à paramétrer par rapport au HTML.
+
+En 2024, un nouveau système d'exemple interactif a fait son apparition pour remplacer l'ancien système qui nécessitait de mettre les exemples dans un dépôt GitHub. Maintenant, tous les exemples sont directement intégrés en haut des pages pour les sections concernées, ce qui a également permis d'étendre le nombre d'exemples introductif dans des sections qui n'en avaient pas.
+
+En août 2025, les fonctionnalités de Yari ont été remplacées par Rari, nouveau moteur, nouveau fonctionnement, avec cela, la partie avant a été séparée et nommée Fred qui est un diminutif pour Fr(ont)-e(n)d.
+Rari est écrit en Rust et est ajouté dans Fred comme une dépendance directe. Vous n'avez plus à vous soucier d'une partie du travail que le serveur local fait, et ce dernier démarre plus rapidement.
+
+:::note
+Yari est toujours existant, même s'il n'est plus utilisé comme un outil&nbsp;; en août 2025, il a été remplacé par Fred&nbsp;; en septembre 2026, il est officiellement devenu une dépendance en lecture seule puisqu'il est toujours utilisé dans le MDN.
+:::
+
 ## Bifurquer le dépôt principal
 
 import { Pencil } from 'lucide-react'
