@@ -40,7 +40,7 @@
     "@docusaurus/theme-mermaid": "^3.10.2",
     "@mdx-js/react": "3.1.1",
     "clsx": "2.1.1",
-    "lucide-react": "1.61.0",
+    "lucide-react": "1.70.0",
     "posthog-docusaurus": "^2.0.5",
     "prism-react-renderer": "2.4.1",
     "react": "19.3.1",
